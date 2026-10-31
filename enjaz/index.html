@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0D1B2E">
+<title>اطلب من إنجاز رقمي</title>
+<meta name="description" content="نموذج طلب عروض PowerPoint وفيديوهات الشرح والخدمات الإلكترونية من «إنجاز رقمي» — يرسل طلبك عبر واتساب.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px)}
+body{margin:0}
+[hidden]{display:none!important}
+
+/* Layout: one narrow column, a navy brand band on top, one step card at a time, sticky action bar at the bottom */
+:root{
+  --bg:#EEF2F7; --surface:#FFFFFF; --ink:#0D1B2E; --muted:#4D5B6B; --line:#D5DDE7;
+  --navy:#0D1B2E; --navy-2:#16305A; --gold:#B98A2E; --gold-soft:#F3E6C8; --teal:#14897E; --teal-soft:#DDF3F0;
+  --on-navy:#F6EFE2; --on-navy-muted:#C9D4E0; --warn:#9A5A00; --warn-soft:#FFF1D6;
+  --font:'Tajawal', 'Segoe UI', Tahoma, 'Geeza Pro', sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A1524; --surface:#11223A; --ink:#EEF2F7; --muted:#AAB7C6; --line:#24395A;
+  --gold:#E2B862; --gold-soft:#3A3120; --teal:#3FD1C3; --teal-soft:#123A3A;
+  --warn:#F2C26B; --warn-soft:#3A2E14; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A1524; --surface:#11223A; --ink:#EEF2F7; --muted:#AAB7C6; --line:#24395A;
+  --gold:#E2B862; --gold-soft:#3A3120; --teal:#3FD1C3; --teal-soft:#123A3A;
+  --warn:#F2C26B; --warn-soft:#3A2E14; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.6;direction:rtl}
+.wrap{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+header.brand{background:var(--navy);color:var(--on-navy)}
+header.brand .wrap{padding-block:22px 20px;display:flex;align-items:center;gap:14px}
+.mark{flex:none;width:52px;height:52px}
+.brand h1{margin:0;font-size:26px;font-weight:800;line-height:1.2;text-wrap:balance}
+.brand p{margin:2px 0 0;font-size:15px;color:var(--on-navy-muted)}
+
+.progress{background:var(--navy);padding-bottom:16px}
+.progress .wrap{display:flex;align-items:center;gap:12px}
+.bar{flex:1;height:6px;border-radius:3px;background:rgba(246,239,226,.18);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:#E2B862;border-radius:3px;transition:width .25s ease}
+.count{font-size:14px;color:var(--on-navy-muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+main .wrap{padding-block:22px 130px}
+.step{display:flex;flex-direction:column;gap:18px}
+.step h2{margin:0;font-size:23px;font-weight:800;line-height:1.35;text-wrap:balance}
+.step .lead{margin:-10px 0 0;color:var(--muted);font-size:16px}
+
+fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;min-width:0}
+legend{padding:0;margin-bottom:10px;font-weight:700;font-size:16px}
+.opts{display:grid;gap:10px}
+.opts.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opt .card{display:flex;flex-direction:column;gap:2px;padding:14px 16px;border:1.5px solid var(--line);border-radius:var(--r);background:var(--surface);min-height:56px;justify-content:center;transition:border-color .15s,background .15s}
+.opt .t{font-weight:700;font-size:17px;line-height:1.35}
+.opt .d{color:var(--muted);font-size:14.5px;line-height:1.45}
+.opt .p{color:var(--gold);font-weight:800;font-size:15.5px;font-variant-numeric:tabular-nums}
+.opt .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.opt input:checked + .card{border-color:var(--teal);background:var(--teal-soft)}
+.opt input:focus-visible + .card{outline:3px solid var(--gold);outline-offset:2px}
+.tag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--teal);letter-spacing:.2px}
+
+label.f{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:16px}
+label.f small{font-weight:500;color:var(--muted);font-size:14px}
+input[type=text],input[type=date],textarea{font:inherit;font-size:17px;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+textarea{min-height:96px;resize:vertical}
+input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:1px;border-color:var(--teal)}
+
+.slider{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.slider .val{display:flex;justify-content:space-between;align-items:baseline;font-weight:700}
+.slider output{font-size:24px;font-weight:800;color:var(--teal);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--teal)}
+.hint{font-size:14px;color:var(--muted);margin:0}
+
+.note{border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.55;background:var(--gold-soft);color:var(--ink)}
+.note.warn{background:var(--warn-soft);color:var(--ink)}
+.note.warn b{color:var(--warn)}
+
+.reco{background:var(--teal-soft);border:1.5px solid var(--teal);border-radius:var(--r);padding:14px 16px}
+.reco b{color:var(--teal)}
+
+.summary{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden}
+.summary dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+.summary dt,.summary dd{margin:0;padding:10px 16px;border-bottom:1px solid var(--line);font-size:15.5px}
+.summary dt{color:var(--muted);white-space:nowrap}
+.summary dd{font-weight:700;min-width:0;overflow-wrap:anywhere}
+.price{background:var(--navy);color:var(--on-navy);padding:16px;display:flex;flex-direction:column;gap:2px}
+.price span{font-size:14px;color:var(--on-navy-muted)}
+.price strong{font-size:28px;font-weight:800;color:#F0CB7A;font-variant-numeric:tabular-nums;line-height:1.3}
+
+.actions{position:fixed;inset:auto 0 0 0;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+.actions .wrap{display:flex;gap:10px;padding-block:12px}
+.btn{font:inherit;font-weight:800;font-size:17px;border-radius:12px;padding:13px 18px;border:1.5px solid transparent;cursor:pointer;min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.btn.primary{flex:1;background:var(--teal);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#06231F}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#06231F}}
+.btn.primary[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.wa{flex:1;background:#1F8F55;color:#fff}
+
+.done{text-align:center;display:flex;flex-direction:column;gap:14px;align-items:center;padding-top:10px}
+.done .ok{width:64px;height:64px}
+.restart{background:none;border:0;color:var(--teal);font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;padding:6px}
+footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="brand">
+  <div class="wrap">
+    <svg class="mark" viewBox="-200 -170 400 340" aria-hidden="true">
+      <defs><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0CB7A"/><stop offset="1" stop-color="#D9A94A"/></linearGradient></defs>
+      <rect x="-190" y="-150" width="380" height="250" rx="26" fill="#0D1B2E" stroke="url(#gg)" stroke-width="16"/>
+      <rect x="-24" y="100" width="48" height="50" fill="url(#gg)"/>
+      <rect x="-96" y="146" width="192" height="18" rx="9" fill="url(#gg)"/>
+      <path d="M-92 -98 H6 a72 72 0 0 1 0 144 H-38 V62 H-92 Z M-38 -52 V0 H2 a26 26 0 0 0 0 -52 Z" fill="url(#gg)" fill-rule="evenodd"/>
+      <circle cx="112" cy="28" r="46" fill="#2EC4B6"/>
+      <path d="M97 5 L135 28 L97 51 Z" fill="#0D1B2E"/>
+    </svg>
+    <div>
+      <h1>إنجاز رقمي</h1>
+      <p>اطلب عرضك أو فيديوك خلال دقيقتين</p>
+    </div>
+  </div>
+</header>
+<div class="progress" id="progressWrap">
+  <div class="wrap">
+    <div class="bar" role="progressbar" aria-label="تقدم الطلب" aria-valuemin="0" aria-valuemax="100" id="bar"><i id="barFill"></i></div>
+    <span class="count" id="count">1 من 6</span>
+  </div>
+</div>
+
+<main>
+<div class="wrap">
+<form id="form" novalidate>
+
+<!-- ROLE -->
+<section class="step" data-step="role">
+  <h2>أهلًا بك 🌷 من أنت؟</h2>
+  <p class="lead">نخصص الأسئلة على حسب اختيارك.</p>
+  <fieldset><legend class="sr" hidden>الفئة</legend>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="role" id="role-teacher" value="teacher"><span class="card"><span class="t">معلمة / معلم</span><span class="d">عروض دروس وأنشطة للطلاب</span></span></label>
+      <label class="opt"><input type="radio" name="role" id="role-student" value="student"><span class="card"><span class="t">طالب / طالبة جامعة</span><span class="d">تكاليف ومشاريع ومناقشات</span></span></label>
+      <label class="opt"><input type="radio" name="role" id="role-other" value="other"><span class="card"><span class="t">أخرى</span><span class="d">جهة أو مشروع أو طلب شخصي</span></span></label>
+    </div>
+  </fieldset>
+</section>
+
+<!-- SERVICE -->
+<section class="step" data-step="service" hidden>
+  <h2>وش الخدمة اللي تحتاجها؟</h2>
+  <fieldset><legend hidden>الخدمة</legend>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="service" id="svc-ppt" value="ppt"><span class="card"><span class="t">عرض PowerPoint</span><span class="d">تنسيق أو تصميم أو إعداد كامل</span></span></label>
+      <label class="opt"><input type="radio" name="service" id="svc-video" value="video"><span class="card"><span class="t">فيديو شرح بالذكاء الاصطناعي</span><span class="d">نص وصوت ومشاهد ومونتاج بسيط</span></span></label>
+      <label class="opt"><input type="radio" name="service" id="svc-e" value="eservice"><span class="card"><span class="t">خدمة إلكترونية</span><span class="d">تنسيق ملفات ونماذج، إدخال بيانات، مهام رقمية</span></span></label>
+    </div>
+  </fieldset>
+</section>
+
+<!-- PACKAGE -->
+<section class="step" data-step="pkg" hidden>
+  <h2>اختر الباقة</h2>
+  <p class="lead">الأسعار تقديرية، والسعر النهائي بعد مراجعة طلبك.</p>
+  <fieldset><legend hidden>الباقة</legend>
+    <div class="opts" id="pkgList"></div>
+  </fieldset>
+  <div id="helpBox" hidden>
+    <fieldset>
+      <legend>وش عندك حاليًا؟</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="has" id="has-deck" value="deck"><span class="card"><span class="t">عرض جاهز وأبي تنسيقه</span></span></label>
+        <label class="opt"><input type="radio" name="has" id="has-content" value="content"><span class="card"><span class="t">محتوى جاهز وأبي تصميم العرض</span></span></label>
+        <label class="opt"><input type="radio" name="has" id="has-none" value="none"><span class="card"><span class="t">أبي إعداد المحتوى والتصميم</span></span></label>
+      </div>
+    </fieldset>
+    <div class="slider" style="margin-top:12px">
+      <div class="val"><label for="helpSlides">كم شريحة تقريبًا؟</label><output id="helpSlidesOut" for="helpSlides">10</output></div>
+      <input type="range" id="helpSlides" min="3" max="40" value="10">
+    </div>
+    <div class="reco" id="reco" hidden style="margin-top:12px"></div>
+  </div>
+</section>
+
+<!-- DETAILS (ppt) -->
+<section class="step" data-step="details" hidden>
+  <h2>تفاصيل العرض</h2>
+  <div id="teacherFields" style="display:flex;flex-direction:column;gap:14px">
+    <label class="f" for="subject">المادة<input type="text" id="subject" placeholder="مثال: لغتي"></label>
+    <label class="f" for="grade">الصف أو المرحلة<input type="text" id="grade" placeholder="مثال: الرابع الابتدائي"></label>
+    <label class="f" for="lesson">عنوان الدرس<input type="text" id="lesson" placeholder="مثال: الجملة الفعلية"></label>
+  </div>
+  <div id="studentFields" style="display:flex;flex-direction:column;gap:14px">
+    <label class="f" for="course">المقرر أو المجال<input type="text" id="course" placeholder="مثال: إدارة سلاسل الإمداد"></label>
+    <label class="f" for="topic">عنوان العرض<input type="text" id="topic" placeholder="اكتب الموضوع"></label>
+    <fieldset id="kindSet"><legend>نوع العرض</legend>
+      <div class="opts two">
+        <label class="opt"><input type="radio" name="kind" id="kind-task" value="تكليف"><span class="card"><span class="t">تكليف</span></span></label>
+        <label class="opt"><input type="radio" name="kind" id="kind-proj" value="مشروع"><span class="card"><span class="t">مشروع</span></span></label>
+        <label class="opt"><input type="radio" name="kind" id="kind-def" value="مناقشة"><span class="card"><span class="t">مناقشة</span></span></label>
+        <label class="opt"><input type="radio" name="kind" id="kind-oth" value="أخرى"><span class="card"><span class="t">أخرى</span></span></label>
+      </div>
+    </fieldset>
+  </div>
+  <div class="slider">
+    <div class="val"><label for="slides">عدد الشرائح</label><output id="slidesOut" for="slides">10</output></div>
+    <input type="range" id="slides" min="3" max="40" value="10">
+    <p class="hint" id="slidesHint"></p>
+  </div>
+  <fieldset id="contentSet"><legend>المحتوى</legend>
+    <div class="opts two">
+      <label class="opt"><input type="radio" name="content" id="content-ready" value="ready"><span class="card"><span class="t">جاهز</span><span class="d">بأرسله في المحادثة</span></span></label>
+      <label class="opt"><input type="radio" name="content" id="content-need" value="need"><span class="card"><span class="t">أحتاج إعداده</span><span class="d">تجهزونه لي</span></span></label>
+    </div>
+  </fieldset>
+  <div class="note" id="contentNote" hidden></div>
+  <fieldset id="interSet"><legend>أسئلة أو أنشطة تفاعلية داخل العرض؟</legend>
+    <div class="opts two">
+      <label class="opt"><input type="radio" name="inter" id="inter-yes" value="نعم"><span class="card"><span class="t">نعم</span></span></label>
+      <label class="opt"><input type="radio" name="inter" id="inter-no" value="لا"><span class="card"><span class="t">لا</span></span></label>
+    </div>
+  </fieldset>
+  <fieldset><legend>لغة العرض</legend>
+    <div class="opts two">
+      <label class="opt"><input type="radio" name="lang" id="lang-ar" value="عربي"><span class="card"><span class="t">عربي</span></span></label>
+      <label class="opt"><input type="radio" name="lang" id="lang-en" value="إنجليزي"><span class="card"><span class="t">إنجليزي</span></span></label>
+    </div>
+  </fieldset>
+</section>
+
+<!-- STYLE (ppt) -->
+<section class="step" data-step="style" hidden>
+  <h2>الطابع المفضل</h2>
+  <p class="lead">اختياري، يساعدنا نوصل للشكل اللي يعجبك.</p>
+  <fieldset><legend hidden>الطابع</legend>
+    <div class="opts two">
+      <label class="opt"><input type="radio" name="style" id="style-formal" value="رسمي"><span class="card"><span class="t">رسمي</span><span class="d">هادئ ومرتب</span></span></label>
+      <label class="opt"><input type="radio" name="style" id="style-kids" value="مبهج للأطفال"><span class="card"><span class="t">مبهج</span><span class="d">ألوان وحيوية للصغار</span></span></label>
+      <label class="opt"><input type="radio" name="style" id="style-acad" value="أكاديمي"><span class="card"><span class="t">أكاديمي</span><span class="d">مناسب للجامعة</span></span></label>
+      <label class="opt"><input type="radio" name="style" id="style-any" value="اتركوه لكم"><span class="card"><span class="t">اتركوه لكم</span><span class="d">نختار الأنسب</span></span></label>
+    </div>
+  </fieldset>
+  <label class="f" for="notes">ملاحظات <small>اختياري</small><textarea id="notes" placeholder="أي تفاصيل تحب نعرفها: ألوان معينة، عناصر لازم تكون موجودة…"></textarea></label>
+</section>
+
+<!-- VIDEO -->
+<section class="step" data-step="video" hidden>
+  <h2>تفاصيل الفيديو</h2>
+  <label class="f" for="vtopic">موضوع الفيديو<input type="text" id="vtopic" placeholder="مثال: شرح درس الكسور، أو تعريف بمشروعي"></label>
+  <fieldset><legend>المدة</legend>
+    <div class="opts" id="durList"></div>
+  </fieldset>
+  <fieldset><legend>النص</legend>
+    <div class="opts two">
+      <label class="opt"><input type="radio" name="script" id="script-ready" value="جاهز"><span class="card"><span class="t">جاهز</span><span class="d">بأرسله</span></span></label>
+      <label class="opt"><input type="radio" name="script" id="script-need" value="أحتاج كتابته"><span class="card"><span class="t">أحتاج كتابته</span></span></label>
+    </div>
+  </fieldset>
+  <fieldset><legend>الصوت</legend>
+    <div class="opts two">
+      <label class="opt"><input type="radio" name="voice" id="voice-ai" value="صوت بالذكاء الاصطناعي"><span class="card"><span class="t">صوت AI</span></span></label>
+      <label class="opt"><input type="radio" name="voice" id="voice-text" value="نصوص على الشاشة"><span class="card"><span class="t">نصوص على الشاشة</span></span></label>
+    </div>
+  </fieldset>
+  <fieldset><legend>ترجمة؟</legend>
+    <div class="opts two">
+      <label class="opt"><input type="radio" name="trans" id="trans-no" value="لا"><span class="card"><span class="t">لا</span></span></label>
+      <label class="opt"><input type="radio" name="trans" id="trans-yes" value="نعم"><span class="card"><span class="t">نعم</span></span></label>
+    </div>
+  </fieldset>
+  <label class="f" for="vnotes">ملاحظات <small>اختياري</small><textarea id="vnotes" placeholder="الهدف من الفيديو، أسلوب معين، أمثلة تعجبك…"></textarea></label>
+</section>
+
+<!-- E-SERVICE -->
+<section class="step" data-step="eservice" hidden>
+  <h2>صف لنا الخدمة</h2>
+  <p class="lead">نراجع كل طلب أولًا للتأكد من إمكانية تنفيذه، والسعر والمدة على حسب نوع المهمة والجهد المطلوب.</p>
+  <label class="f" for="edesc">وش المطلوب؟<textarea id="edesc" placeholder="مثال: تنسيق ملف وورد 12 صفحة، أو إدخال بيانات من ملف PDF إلى Excel"></textarea></label>
+</section>
+
+<!-- SUMMARY -->
+<section class="step" data-step="summary" hidden>
+  <h2>الموعد والملخص</h2>
+  <label class="f" for="date">موعد التسليم المطلوب<input type="date" id="date"></label>
+  <div class="note warn" id="rushNote" hidden><b>موعد قريب:</b> المواعيد القريبة قد تؤثر على السعر، ونأكد لك إمكانية التسليم قبل البدء.</div>
+  <div class="summary">
+    <div class="price"><span id="priceLabel">السعر التقديري</span><strong id="priceVal">—</strong><span>تقديري، والسعر النهائي يتحدد بعد معرفة تفاصيل الطلب</span></div>
+    <dl id="sumList"></dl>
+  </div>
+  <div class="note">بعد الإرسال أرسل <b>ملف المحتوى وأي صور أو شعار</b> في نفس المحادثة.</div>
+</section>
+
+<!-- DONE -->
+<section class="step" data-step="done" hidden>
+  <div class="done">
+    <svg class="ok" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="var(--teal-soft)" stroke="var(--teal)" stroke-width="3"/><path d="M19 33 l9 9 l17 -19" fill="none" stroke="var(--teal)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <h2>تم تجهيز طلبك ✅</h2>
+    <p class="lead" style="margin:0">إذا ما انفتح واتساب، اضغط الزر مرة ثانية. لا تنسَ ترسل ملف المحتوى وأي صور في المحادثة.</p>
+    <p class="lead" style="margin:0">نرد عليك بالسعر النهائي خلال ساعات العمل يوميًا من 8:00 صباحًا إلى 11:00 مساءً.</p>
+    <a class="btn wa" id="waAgain" href="#" target="_blank" rel="noopener" style="width:100%">افتح واتساب مرة ثانية</a>
+    <button type="button" class="restart" id="restart">ابدأ طلبًا جديدًا</button>
+  </div>
+</section>
+
+</form>
+<footer>إنجاز رقمي · واتساب <span dir="ltr">+966 55 681 6716</span></footer>
+</div>
+</main>
+
+<div class="actions" id="actions">
+  <div class="wrap">
+    <button type="button" class="btn ghost" id="back">رجوع</button>
+    <button type="button" class="btn primary" id="next">التالي</button>
+    <a class="btn wa" id="send" href="#" target="_blank" rel="noopener" hidden>أرسل طلبي عبر واتساب</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var WA = '966556816716';
+  var KEY = 'enjaz-order-v1';
+  var PKGS = {
+    quick:   {name:'تنسيق سريع', min:60, max:null, limit:10, desc:'تنسيق عرض جاهز، وتوحيد الخطوط والألوان', content:false},
+    student: {name:'عرض طلابي', min:120, max:180, limit:10, desc:'تصميم من محتوى جاهز، مع صور وأيقونات مناسبة', content:false},
+    full:    {name:'عرض متكامل', min:200, max:300, limit:10, desc:'إعداد المحتوى وتنظيمه وتصميم العرض', content:true},
+    teacher: {name:'عرض تعليمي للمعلمات', min:180, max:320, limit:15, desc:'عرض تفاعلي بأسئلة أو أنشطة وعناصر للشرح', content:false},
+    pro:     {name:'عرض احترافي موسّع', min:350, max:550, limit:20, desc:'مخططات أو إنفوجرافيك وحركات بسيطة حسب الحاجة', content:false}
+  };
+  var DURS = {
+    short: {name:'قصير — حتى 30 ثانية', min:100, max:180},
+    mid:   {name:'متوسط — من 31 ثانية إلى 3 دقائق', min:200, max:400},
+    long:  {name:'موسّع — أكثر من 3 دقائق وحتى 5 دقائق', min:400, max:700},
+    xl:    {name:'أطول من 5 دقائق', min:null, max:null}
+  };
+  var $ = function(id){return document.getElementById(id)};
+  var form = $('form');
+  var s = {step:0};
+
+  // ---------- storage ----------
+  function load(){ try{ var v = localStorage.getItem(KEY); return v ? JSON.parse(v) : null; }catch(e){ return null; } }
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(collect())); }catch(e){} }
+  function clearSave(){ try{ localStorage.removeItem(KEY); }catch(e){} }
+
+  // ---------- build option lists ----------
+  function pkgOrder(){
+    var r = val('role');
+    if(r==='teacher') return ['teacher','quick','student','full','pro'];
+    if(r==='student') return ['student','quick','full','pro','teacher'];
+    return ['quick','student','full','pro','teacher'];
+  }
+  function renderPkgs(){
+    var cur = val('pkg');
+    var html = pkgOrder().map(function(k){
+      var p = PKGS[k];
+      var price = p.max ? ('من '+p.min+' إلى '+p.max+' ﷼') : ('يبدأ من '+p.min+' ﷼');
+      return '<label class="opt"><input type="radio" name="pkg" id="pkg-'+k+'" value="'+k+'"'+(cur===k?' checked':'')+'><span class="card"><span class="row"><span class="t">'+p.name+'</span><span class="p">'+price+'</span></span><span class="d">'+p.desc+' · حتى '+p.limit+' شرائح</span></span></label>';
+    }).join('') +
+    '<label class="opt"><input type="radio" name="pkg" id="pkg-help" value="help"'+(cur==='help'?' checked':'')+'><span class="card"><span class="t">مو متأكد، ساعدوني أختار</span><span class="d">سؤالين ونقترح لك الباقة المناسبة</span></span></label>';
+    $('pkgList').innerHTML = html;
+  }
+  function renderDurs(){
+    $('durList').innerHTML = Object.keys(DURS).map(function(k){
+      var d = DURS[k];
+      var price = d.min ? ('من '+d.min+' إلى '+d.max+' ﷼') : 'يُسعّر بعد المراجعة';
+      return '<label class="opt"><input type="radio" name="dur" id="dur-'+k+'" value="'+k+'"><span class="card"><span class="row"><span class="t">'+d.name+'</span><span class="p">'+price+'</span></span></span></label>';
+    }).join('');
+  }
+
+  // ---------- helpers ----------
+  function val(name){ var el = form.querySelector('input[name="'+name+'"]:checked'); return el ? el.value : ''; }
+  function setVal(name, v){ var el = form.querySelector('input[name="'+name+'"][value="'+v+'"]'); if(el) el.checked = true; }
+  function txt(id){ return ($(id).value||'').trim(); }
+
+  function recommend(){
+    var has = val('has'), n = +$('helpSlides').value, r = val('role');
+    if(!has) return null;
+    var k;
+    if(has==='deck') k = n<=20 ? 'quick' : 'quick';
+    else if(has==='none') k = 'full';
+    else if(r==='teacher') k = n<=15 ? 'teacher' : 'pro';
+    else k = n<=10 ? 'student' : (n<=20 ? 'pro' : 'pro');
+    return k;
+  }
+  function effectivePkg(){
+    var p = val('pkg');
+    if(p==='help') return recommend();
+    return p;
+  }
+  function contentState(){
+    var k = effectivePkg();
+    if(k==='full') return 'need';
+    if(val('pkg')==='help'){ var h = val('has'); if(h==='none') return 'need'; if(h) return 'ready'; }
+    return val('content');
+  }
+  function slidesCount(){ return val('pkg')==='help' ? +$('helpSlides').value : +$('slides').value; }
+
+  function estimate(){
+    var svc = val('service');
+    if(svc==='video'){
+      var d = DURS[val('dur')]; if(!d) return null;
+      if(!d.min) return {text:'يُسعّر بعد مراجعة التفاصيل'};
+      return {min:d.min, max:d.max, text:'من '+d.min+' إلى '+d.max+' ﷼'};
+    }
+    if(svc==='eservice') return {text:'يُحدد بعد مراجعة الطلب'};
+    var k = effectivePkg(); var p = PKGS[k]; if(!p) return null;
+    var n = slidesCount();
+    var extra = Math.max(0, n - p.limit);
+    var rate = (p.content || contentState()==='need') ? 20 : 10;
+    var add = extra * rate;
+    var min = p.min + add, max = p.max ? p.max + add : null;
+    return {min:min, max:max, extra:extra, rate:rate, text: max ? ('من '+min+' إلى '+max+' ﷼') : ('يبدأ من '+min+' ﷼')};
+  }
+
+  // ---------- steps ----------
+  function steps(){
+    var svc = val('service');
+    var list = ['role','service'];
+    if(svc==='ppt') list = list.concat(['pkg','details','style','summary']);
+    else if(svc==='video') list = list.concat(['video','summary']);
+    else if(svc==='eservice') list = list.concat(['eservice','summary']);
+    else list = list.concat(['pkg','details','style','summary']);
+    return list;
+  }
+  function current(){ return steps()[s.step]; }
+
+  function valid(name){
+    switch(name){
+      case 'role': return !!val('role');
+      case 'service': return !!val('service');
+      case 'pkg': return !!val('pkg') && (val('pkg')!=='help' || !!recommend());
+      case 'details':
+        var r = val('role');
+        var base = r==='teacher' ? (txt('subject') && txt('lesson')) : txt('topic');
+        var c = (effectivePkg()==='full' || val('pkg')==='help') ? true : !!val('content');
+        var inter = r==='teacher' && effectivePkg()!=='quick' ? !!val('inter') : true;
+        return !!base && c && inter && !!val('lang');
+      case 'style': return true;
+      case 'video': return !!txt('vtopic') && !!val('dur') && !!val('script') && !!val('voice') && !!val('trans');
+      case 'eservice': return txt('edesc').length >= 5;
+      case 'summary': return !!$('date').value;
+    }
+    return true;
+  }
+
+  function fmtDate(v){
+    if(!v) return '';
+    var d = new Date(v+'T12:00:00');
+    try{ return d.toLocaleDateString('ar-u-ca-gregory-nu-latn',{weekday:'long', day:'numeric', month:'long'}); }catch(e){ return v; }
+  }
+  function daysUntil(v){
+    if(!v) return 99; var t = new Date(); t.setHours(12,0,0,0);
+    return Math.round((new Date(v+'T12:00:00') - t)/86400000);
+  }
+  function code(){
+    if(!s.code){ var d = new Date(); s.code = 'ER-' + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0') + '-' + String(Math.floor(10+Math.random()*90)); }
+    return s.code;
+  }
+
+  function rows(){
+    var svc = val('service'), r = val('role'), out = [];
+    var roleName = {teacher:'معلمة / معلم', student:'طالب / طالبة جامعة', other:'أخرى'}[r] || '';
+    if(svc==='ppt'){
+      var k = effectivePkg(), p = PKGS[k] || {};
+      var who = roleName;
+      if(r==='teacher') who += (txt('subject')?' — '+txt('subject'):'') + (txt('grade')?'، '+txt('grade'):'');
+      else if(txt('course')) who += ' — ' + txt('course');
+      out.push(['الفئة', who]);
+      out.push(['الباقة', (p.name||'') + ' (حتى '+(p.limit||'')+' شريحة)' + (val('pkg')==='help'?' — مقترحة':'')]);
+      if(r==='teacher') out.push(['الدرس', txt('lesson')]);
+      else out.push(['العرض', txt('topic') + (val('kind')?' — '+val('kind'):'')]);
+      var est = estimate();
+      out.push(['عدد الشرائح', slidesCount() + (est && est.extra ? ' (+'+est.extra+' شريحة إضافية)' : '')]);
+      out.push(['المحتوى', contentState()==='need' ? 'يحتاج إعداد' : 'جاهز (سأرسله هنا)']);
+      if(r==='teacher' && val('inter')) out.push(['أنشطة تفاعلية', val('inter')]);
+      out.push(['اللغة', val('lang')]);
+      if(val('style')) out.push(['الطابع', val('style')]);
+      if(txt('notes')) out.push(['ملاحظات', txt('notes')]);
+    } else if(svc==='video'){
+      out.push(['الفئة', roleName]);
+      out.push(['الموضوع', txt('vtopic')]);
+      var d = DURS[val('dur')]; out.push(['المدة', d ? d.name : '']);
+      out.push(['النص', val('script')]);
+      out.push(['الصوت', val('voice')]);
+      out.push(['ترجمة', val('trans')]);
+      if(txt('vnotes')) out.push(['ملاحظات', txt('vnotes')]);
+    } else if(svc==='eservice'){
+      out.push(['الفئة', roleName]);
+      out.push(['المطلوب', txt('edesc')]);
+    }
+    if($('date').value) out.push(['الموعد', fmtDate($('date').value)]);
+    return out;
+  }
+
+  function message(){
+    var svc = val('service');
+    var tag = {ppt:'[عرض تقديمي]', video:'[فيديو]', eservice:'[خدمة إلكترونية]'}[svc] || '';
+    var lines = [tag + ' طلب رقم ' + code()];
+    rows().forEach(function(r){ lines.push(r[0] + ': ' + r[1]); });
+    var est = estimate();
+    if(est) lines.push('السعر التقديري: ' + est.text);
+    return lines.join('\n');
+  }
+  function waLink(){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(message()); }
+
+  function esc(t){ var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+
+  function renderSummary(){
+    var est = estimate();
+    $('priceVal').textContent = est ? est.text : '—';
+    $('sumList').innerHTML = rows().map(function(r){ return '<dt>'+esc(r[0])+'</dt><dd>'+esc(String(r[1]))+'</dd>'; }).join('');
+    var dd = daysUntil($('date').value);
+    $('rushNote').hidden = !($('date').value && dd <= 2);
+    $('send').href = waLink();
+    $('waAgain').href = waLink();
+  }
+
+  function renderDetails(){
+    var r = val('role');
+    $('teacherFields').hidden = r!=='teacher';
+    $('studentFields').hidden = r==='teacher';
+    $('kindSet').hidden = r!=='student';
+    var k = effectivePkg(), p = PKGS[k];
+    var isHelp = val('pkg')==='help';
+    $('contentSet').hidden = (k==='full' || isHelp);
+    $('interSet').hidden = !(r==='teacher' && k!=='quick');
+    // slider follows the help answer when the package was suggested
+    if(isHelp){ $('slides').value = $('helpSlides').value; }
+    $('slidesOut').textContent = $('slides').value;
+    if(p){
+      var n = +$('slides').value, extra = Math.max(0, n - p.limit);
+      var rate = (p.content || contentState()==='need') ? 20 : 10;
+      $('slidesHint').textContent = extra
+        ? ('الباقة تشمل حتى '+p.limit+' شريحة، والإضافي '+extra+' × '+rate+' ﷼ = '+(extra*rate)+' ﷼ تقريبًا.')
+        : ('الباقة تشمل حتى '+p.limit+' شريحة.');
+    }
+    var note = $('contentNote');
+    if((k==='quick' || k==='student') && val('content')==='need'){
+      note.hidden = false;
+      note.innerHTML = 'باقة <b>'+p.name+'</b> تعتمد على محتوى جاهز. إذا تحتاج إعداد المحتوى، الأنسب <b>العرض المتكامل</b> — تقدر ترجع وتغيّر الباقة.';
+    } else note.hidden = true;
+  }
+
+  function renderReco(){
+    var isHelp = val('pkg')==='help';
+    $('helpBox').hidden = !isHelp;
+    $('helpSlidesOut').textContent = $('helpSlides').value;
+    var k = isHelp ? recommend() : null, box = $('reco');
+    if(k){
+      var p = PKGS[k];
+      box.hidden = false;
+      box.innerHTML = 'نقترح لك <b>'+p.name+'</b> — '+(p.max?('من '+p.min+' إلى '+p.max):('يبدأ من '+p.min))+' ﷼، حتى '+p.limit+' شريحة.';
+    } else box.hidden = true;
+  }
+
+  function show(){
+    var list = steps(); if(s.step >= list.length) s.step = list.length-1;
+    var name = list[s.step];
+    form.querySelectorAll('.step').forEach(function(sec){ sec.hidden = sec.dataset.step !== name; });
+    var total = list.length;
+    var done = name==='done';
+    $('progressWrap').hidden = done;
+    $('actions').hidden = done;
+    $('count').textContent = (s.step+1) + ' من ' + total;
+    var pct = Math.round(((s.step+1)/total)*100);
+    $('barFill').style.width = pct + '%';
+    $('bar').setAttribute('aria-valuenow', pct);
+    $('back').hidden = s.step===0;
+    var last = name==='summary';
+    $('next').hidden = last;
+    $('send').hidden = !last;
+    if(name==='pkg'){ renderPkgs(); renderReco(); }
+    if(name==='details') renderDetails();
+    if(name==='summary'){ var dt = $('date'); var t = new Date(); dt.min = t.toISOString().slice(0,10); renderSummary(); }
+    refresh();
+  }
+  function refresh(){
+    var name = current();
+    var ok = valid(name);
+    $('next').setAttribute('aria-disabled', ok ? 'false' : 'true');
+    if(name==='summary'){
+      $('send').setAttribute('aria-disabled', ok ? 'false' : 'true');
+      $('send').style.opacity = ok ? '' : '.45';
+    }
+  }
+
+  // ---------- events ----------
+  $('next').addEventListener('click', function(){
+    if(!valid(current())){ var f = form.querySelector('.step:not([hidden]) input:not([type=radio]):not([type=range]), .step:not([hidden]) textarea'); if(f && !f.value) f.focus(); return; }
+    s.step++; show(); save(); window.scrollTo(0,0);
+  });
+  $('back').addEventListener('click', function(){ if(s.step>0){ s.step--; show(); save(); window.scrollTo(0,0);} });
+  $('send').addEventListener('click', function(e){
+    if(!valid('summary')){ e.preventDefault(); $('date').focus(); return; }
+    renderSummary(); // refresh link just before leaving
+    var list = steps(); list.push('done');
+    setTimeout(function(){ form.querySelectorAll('.step').forEach(function(sec){ sec.hidden = sec.dataset.step !== 'done'; }); $('progressWrap').hidden = true; $('actions').hidden = true; window.scrollTo(0,0); }, 300);
+  });
+  $('restart').addEventListener('click', function(){ clearSave(); form.reset(); s = {step:0}; $('slides').value = 10; $('helpSlides').value = 10; show(); });
+
+  form.addEventListener('change', function(e){
+    if(e.target.name==='role'){ renderPkgs(); }
+    if(e.target.name==='pkg' || e.target.name==='has'){ renderReco(); }
+    if(current()==='details') renderDetails();
+    if(current()==='summary') renderSummary();
+    refresh(); save();
+  });
+  form.addEventListener('input', function(e){
+    if(e.target.id==='slides'){ $('slidesOut').textContent = e.target.value; renderDetails(); }
+    if(e.target.id==='helpSlides'){ renderReco(); }
+    if(current()==='summary') renderSummary();
+    refresh(); save();
+  });
+  form.addEventListener('submit', function(e){ e.preventDefault(); });
+
+  // ---------- state ----------
+  function collect(){
+    var o = {step:s.step, code:s.code, radios:{}, fields:{}};
+    form.querySelectorAll('input[type=radio]:checked').forEach(function(r){ o.radios[r.name] = r.value; });
+    ['subject','grade','lesson','course','topic','notes','vtopic','vnotes','edesc','date','slides','helpSlides'].forEach(function(id){ o.fields[id] = $(id).value; });
+    return o;
+  }
+  function restore(o){
+    if(!o) return;
+    Object.keys(o.fields||{}).forEach(function(id){ if($(id) && o.fields[id]!=null) $(id).value = o.fields[id]; });
+    setVal('role', (o.radios||{}).role); renderPkgs();
+    Object.keys(o.radios||{}).forEach(function(n){ setVal(n, o.radios[n]); });
+    s.step = o.step||0; s.code = o.code;
+  }
+
+  renderPkgs(); renderDurs();
+  restore(load());
+  // re-apply radios rendered after restore (pkg, dur)
+  var saved = load(); if(saved && saved.radios){ ['pkg','dur'].forEach(function(n){ if(saved.radios[n]) setVal(n, saved.radios[n]); }); }
+  show();
+})();
+</script>
+
+</body>
+</html>
