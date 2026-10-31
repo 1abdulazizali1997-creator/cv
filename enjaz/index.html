@@ -163,6 +163,9 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
     <div class="opts">
       <label class="opt"><input type="radio" name="service" id="svc-ppt" value="ppt"><span class="card"><span class="t">عرض PowerPoint</span><span class="d">تنسيق أو تصميم أو إعداد كامل</span></span></label>
       <label class="opt"><input type="radio" name="service" id="svc-video" value="video"><span class="card"><span class="t">فيديو شرح بالذكاء الاصطناعي</span><span class="d">نص وصوت ومشاهد ومونتاج بسيط</span></span></label>
+      <label class="opt"><input type="radio" name="service" id="svc-combo" value="combo"><span class="card"><span class="row"><span class="t">عرض PowerPoint + فيديو شرح</span><span class="p">خصم 10%</span></span><span class="d">اختر باقة العرض ومدة الفيديو، وتحصل على خصم 10% من مجموعهما</span></span></label>
+      <label class="opt"><input type="radio" name="service" id="svc-bteacher" value="bteacher"><span class="card"><span class="row"><span class="t">باقة المعلمات</span><span class="p">من 250 إلى 450 ﷼</span></span><span class="d">عرض تعليمي تفاعلي حتى 15 شريحة بأسئلة وأنشطة + فيديو شرح للدرس حتى 30 ثانية</span></span></label>
+      <label class="opt"><input type="radio" name="service" id="svc-bstudent" value="bstudent"><span class="card"><span class="row"><span class="t">باقة طلاب الجامعات</span><span class="p">من 199 إلى 320 ﷼</span></span><span class="d">عرض طلابي حتى 10 شرائح من محتواك + فيديو قصير حتى 30 ثانية يلخص العرض</span></span></label>
       <label class="opt"><input type="radio" name="service" id="svc-e" value="eservice"><span class="card"><span class="t">خدمة إلكترونية</span><span class="d">تنسيق ملفات ونماذج، إدخال بيانات، مهام رقمية</span></span></label>
     </div>
   </fieldset>
@@ -256,7 +259,8 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
 <!-- VIDEO -->
 <section class="step" data-step="video" hidden>
   <h2>تفاصيل الفيديو</h2>
-  <label class="f" for="vtopic">موضوع الفيديو<input type="text" id="vtopic" placeholder="مثال: شرح درس الكسور، أو تعريف بمشروعي"></label>
+  <p class="lead" id="comboLead" hidden>الفيديو يكون عن نفس موضوع العرض.</p>
+  <label class="f" for="vtopic" id="vtopicLabel">موضوع الفيديو<input type="text" id="vtopic" placeholder="مثال: شرح درس الكسور، أو تعريف بمشروعي"></label>
   <fieldset><legend>المدة</legend>
     <div class="opts" id="durList"></div>
   </fieldset>
@@ -342,6 +346,11 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
     long:  {name:'موسّع — أكثر من 3 دقائق وحتى 5 دقائق', min:400, max:700},
     xl:    {name:'أطول من 5 دقائق', min:null, max:null}
   };
+  var BUNDLES = {
+    bteacher: {name:'باقة المعلمات', pkg:'teacher', min:250, max:450, limit:15, video:'فيديو شرح للدرس حتى 30 ثانية'},
+    bstudent: {name:'باقة طلاب الجامعات', pkg:'student', min:199, max:320, limit:10, video:'فيديو قصير حتى 30 ثانية يلخص العرض'}
+  };
+  function round5(n){ return Math.round(n/5)*5; }
   var $ = function(id){return document.getElementById(id)};
   var form = $('form');
   var s = {step:0};
@@ -392,6 +401,7 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
     return k;
   }
   function effectivePkg(){
+    var b = BUNDLES[val('service')]; if(b) return b.pkg;
     var p = val('pkg');
     if(p==='help') return recommend();
     return p;
@@ -399,10 +409,11 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
   function contentState(){
     var k = effectivePkg();
     if(k==='full') return 'need';
-    if(val('pkg')==='help'){ var h = val('has'); if(h==='none') return 'need'; if(h) return 'ready'; }
+    if(!BUNDLES[val('service')] && val('pkg')==='help'){ var h = val('has'); if(h==='none') return 'need'; if(h) return 'ready'; }
     return val('content');
   }
-  function slidesCount(){ return val('pkg')==='help' ? +$('helpSlides').value : +$('slides').value; }
+  function isHelp(){ return !BUNDLES[val('service')] && val('pkg')==='help'; }
+  function slidesCount(){ return isHelp() ? +$('helpSlides').value : +$('slides').value; }
 
   function estimate(){
     var svc = val('service');
@@ -412,6 +423,25 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
       return {min:d.min, max:d.max, text:'من '+d.min+' إلى '+d.max+' ﷼'};
     }
     if(svc==='eservice') return {text:'يُحدد بعد مراجعة الطلب'};
+    var b = BUNDLES[svc];
+    if(b){
+      var bx = Math.max(0, slidesCount() - b.limit);
+      var br = contentState()==='need' ? 20 : 10;
+      var bmin = b.min + bx*br, bmax = b.max + bx*br;
+      return {min:bmin, max:bmax, extra:bx, rate:br, text:'من '+bmin+' إلى '+bmax+' ﷼'};
+    }
+    if(svc==='combo'){
+      var pe = pptEstimate(), dv = DURS[val('dur')];
+      if(!pe) return null;
+      if(!dv) return pe;
+      if(!dv.min) return {extra:pe.extra, text:'العرض '+pe.text+' + الفيديو يُسعّر بعد المراجعة'};
+      var cmin = round5((pe.min + dv.min)*0.9);
+      var cmax = pe.max ? round5((pe.max + dv.max)*0.9) : null;
+      return {min:cmin, max:cmax, extra:pe.extra, text: cmax ? ('من '+cmin+' إلى '+cmax+' ﷼ (بعد خصم 10%)') : ('يبدأ من '+cmin+' ﷼ (بعد خصم 10%)')};
+    }
+    return pptEstimate();
+  }
+  function pptEstimate(){
     var k = effectivePkg(); var p = PKGS[k]; if(!p) return null;
     var n = slidesCount();
     var extra = Math.max(0, n - p.limit);
@@ -426,6 +456,8 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
     var svc = val('service');
     var list = ['role','service'];
     if(svc==='ppt') list = list.concat(['pkg','details','style','summary']);
+    else if(svc==='combo') list = list.concat(['pkg','details','video','style','summary']);
+    else if(BUNDLES[svc]) list = list.concat(['details','style','summary']);
     else if(svc==='video') list = list.concat(['video','summary']);
     else if(svc==='eservice') list = list.concat(['eservice','summary']);
     else list = list.concat(['pkg','details','style','summary']);
@@ -441,11 +473,11 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
       case 'details':
         var r = val('role');
         var base = r==='teacher' ? (txt('subject') && txt('lesson')) : txt('topic');
-        var c = (effectivePkg()==='full' || val('pkg')==='help') ? true : !!val('content');
+        var c = (effectivePkg()==='full' || isHelp()) ? true : !!val('content');
         var inter = r==='teacher' && effectivePkg()!=='quick' ? !!val('inter') : true;
         return !!base && c && inter && !!val('lang');
       case 'style': return true;
-      case 'video': return !!txt('vtopic') && !!val('dur') && !!val('script') && !!val('voice') && !!val('trans');
+      case 'video': return (val('service')==='combo' || !!txt('vtopic')) && !!val('dur') && !!val('script') && !!val('voice') && !!val('trans');
       case 'eservice': return txt('edesc').length >= 5;
       case 'summary': return !!$('date').value;
     }
@@ -469,13 +501,14 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
   function rows(){
     var svc = val('service'), r = val('role'), out = [];
     var roleName = {teacher:'معلمة / معلم', student:'طالب / طالبة جامعة', other:'أخرى'}[r] || '';
-    if(svc==='ppt'){
-      var k = effectivePkg(), p = PKGS[k] || {};
+    if(svc==='ppt' || svc==='combo' || BUNDLES[svc]){
+      var k = effectivePkg(), p = PKGS[k] || {}, b = BUNDLES[svc];
       var who = roleName;
       if(r==='teacher') who += (txt('subject')?' — '+txt('subject'):'') + (txt('grade')?'، '+txt('grade'):'');
       else if(txt('course')) who += ' — ' + txt('course');
       out.push(['الفئة', who]);
-      out.push(['الباقة', (p.name||'') + ' (حتى '+(p.limit||'')+' شريحة)' + (val('pkg')==='help'?' — مقترحة':'')]);
+      if(b) out.push(['الباقة', b.name + ': ' + p.name + ' (حتى '+b.limit+' شريحة) + ' + b.video]);
+      else out.push(['الباقة', (p.name||'') + ' (حتى '+(p.limit||'')+' شريحة)' + (isHelp()?' — مقترحة':'')]);
       if(r==='teacher') out.push(['الدرس', txt('lesson')]);
       else out.push(['العرض', txt('topic') + (val('kind')?' — '+val('kind'):'')]);
       var est = estimate();
@@ -483,6 +516,10 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
       out.push(['المحتوى', contentState()==='need' ? 'يحتاج إعداد' : 'جاهز (سأرسله هنا)']);
       if(r==='teacher' && val('inter')) out.push(['أنشطة تفاعلية', val('inter')]);
       out.push(['اللغة', val('lang')]);
+      if(svc==='combo'){
+        var dv = DURS[val('dur')];
+        out.push(['الفيديو', (dv ? dv.name : '') + (val('script')?'، النص: '+val('script'):'') + (val('voice')?'، '+val('voice'):'') + (val('trans')?'، ترجمة: '+val('trans'):'')]);
+      }
       if(val('style')) out.push(['الطابع', val('style')]);
       if(txt('notes')) out.push(['ملاحظات', txt('notes')]);
     } else if(svc==='video'){
@@ -503,7 +540,7 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
 
   function message(){
     var svc = val('service');
-    var tag = {ppt:'[عرض تقديمي]', video:'[فيديو]', eservice:'[خدمة إلكترونية]'}[svc] || '';
+    var tag = {ppt:'[عرض تقديمي]', video:'[فيديو]', combo:'[عرض + فيديو]', bteacher:'[باقة المعلمات]', bstudent:'[باقة طلاب الجامعات]', eservice:'[خدمة إلكترونية]'}[svc] || '';
     var lines = [tag + ' طلب رقم ' + code()];
     rows().forEach(function(r){ lines.push(r[0] + ': ' + r[1]); });
     var est = estimate();
@@ -529,19 +566,20 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
     $('teacherFields').hidden = r!=='teacher';
     $('studentFields').hidden = r==='teacher';
     $('kindSet').hidden = r!=='student';
-    var k = effectivePkg(), p = PKGS[k];
-    var isHelp = val('pkg')==='help';
-    $('contentSet').hidden = (k==='full' || isHelp);
-    $('interSet').hidden = !(r==='teacher' && k!=='quick');
+    var k = effectivePkg(), p = PKGS[k], bb = BUNDLES[val('service')];
+    var help = isHelp();
+    $('contentSet').hidden = (k==='full' || help);
+    $('interSet').hidden = !((r==='teacher' && k!=='quick') || val('service')==='bteacher');
     // slider follows the help answer when the package was suggested
-    if(isHelp){ $('slides').value = $('helpSlides').value; }
+    if(help){ $('slides').value = $('helpSlides').value; }
     $('slidesOut').textContent = $('slides').value;
     if(p){
-      var n = +$('slides').value, extra = Math.max(0, n - p.limit);
+      var lim = bb ? bb.limit : p.limit;
+      var n = +$('slides').value, extra = Math.max(0, n - lim);
       var rate = (p.content || contentState()==='need') ? 20 : 10;
       $('slidesHint').textContent = extra
-        ? ('الباقة تشمل حتى '+p.limit+' شريحة، والإضافي '+extra+' × '+rate+' ﷼ = '+(extra*rate)+' ﷼ تقريبًا.')
-        : ('الباقة تشمل حتى '+p.limit+' شريحة.');
+        ? ('الباقة تشمل حتى '+lim+' شريحة، والإضافي '+extra+' × '+rate+' ﷼ = '+(extra*rate)+' ﷼ تقريبًا.')
+        : ('الباقة تشمل حتى '+lim+' شريحة.');
     }
     var note = $('contentNote');
     if((k==='quick' || k==='student') && val('content')==='need'){
@@ -580,6 +618,7 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
     $('send').hidden = !last;
     if(name==='pkg'){ renderPkgs(); renderReco(); }
     if(name==='details') renderDetails();
+    if(name==='video'){ var cb = val('service')==='combo'; $('comboLead').hidden = !cb; $('vtopicLabel').hidden = cb; }
     if(name==='summary'){ var dt = $('date'); var t = new Date(); dt.min = t.toISOString().slice(0,10); renderSummary(); }
     refresh();
   }
