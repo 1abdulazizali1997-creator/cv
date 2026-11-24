@@ -3,686 +3,773 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0D1B2E">
-<title>اطلب من إنجاز رقمي</title>
-<meta name="description" content="نموذج طلب عروض PowerPoint وفيديوهات الشرح والخدمات الإلكترونية من «إنجاز رقمي» — يرسل طلبك عبر واتساب.">
+<meta name="theme-color" content="#070E1F">
+<title>إنجاز رقمي | إعلانات فيديو بالذكاء الاصطناعي وعروض PowerPoint</title>
+<meta name="description" content="إعلانات فيديو بالذكاء الاصطناعي لمتجرك بصوت سعودي احترافي، وعروض PowerPoint وفيديوهات شرح وسيرة ذاتية ATS. أسعار واضحة، وتعديلان مجانًا، والطلب عبر واتساب.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:site_name" content="إنجاز رقمي">
+<meta property="og:title" content="إنجاز رقمي | إعلانات فيديو بالذكاء الاصطناعي">
+<meta property="og:description" content="إعلانك بصوت سعودي احترافي من 99 ريال (عرض الإطلاق). عروض PowerPoint، فيديو شرح، وسيرة ذاتية ATS.">
+<meta property="og:url" content="https://1abdulazizali1997-creator.github.io/cv/enjaz/">
+<meta property="og:image" content="https://1abdulazizali1997-creator.github.io/cv/enjaz/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<link rel="preload" as="image" href="img/hero-m.webp" media="(max-width: 760px)">
+<link rel="preload" as="image" href="img/hero.webp" media="(min-width: 761px)">
 <style>
-:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px)}
-body{margin:0}
-[hidden]{display:none!important}
-
-/* Layout: one narrow column, a navy brand band on top, one step card at a time, sticky action bar at the bottom */
 :root{
-  --bg:#EEF2F7; --surface:#FFFFFF; --ink:#0D1B2E; --muted:#4D5B6B; --line:#D5DDE7;
-  --navy:#0D1B2E; --navy-2:#16305A; --gold:#B98A2E; --gold-soft:#F3E6C8; --teal:#14897E; --teal-soft:#DDF3F0;
-  --on-navy:#F6EFE2; --on-navy-muted:#C9D4E0; --warn:#9A5A00; --warn-soft:#FFF1D6;
-  --font:'Tajawal', 'Segoe UI', Tahoma, 'Geeza Pro', sans-serif;
-  --r:14px;
+  --bg:#070E1F; --bg-2:#0B1530; --bg-3:#101C3D;
+  --card:rgba(255,255,255,.045); --card-2:rgba(255,255,255,.07); --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.18);
+  --ink:#F3F6FC; --muted:#AEB9D1; --soft:#8592B0;
+  --violet:#8E6CFF; --cyan:#3ED2F5; --gold:#E9C46F; --gold-2:#F6DD9C; --green:#22C55E; --wa:#1FAF5A;
+  --grad:linear-gradient(135deg,#8E6CFF 0%,#3ED2F5 100%);
+  --gold-grad:linear-gradient(135deg,#F6DD9C 0%,#E2B44E 100%);
+  --r:20px; --r-sm:14px;
+  --head:'Cairo','IBM Plex Sans Arabic',system-ui,sans-serif;
+  --body:'IBM Plex Sans Arabic','Cairo',system-ui,sans-serif;
+  color-scheme:dark;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0A1524; --surface:#11223A; --ink:#EEF2F7; --muted:#AAB7C6; --line:#24395A;
-  --gold:#E2B862; --gold-soft:#3A3120; --teal:#3FD1C3; --teal-soft:#123A3A;
-  --warn:#F2C26B; --warn-soft:#3A2E14; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0A1524; --surface:#11223A; --ink:#EEF2F7; --muted:#AAB7C6; --line:#24395A;
-  --gold:#E2B862; --gold-soft:#3A3120; --teal:#3FD1C3; --teal-soft:#123A3A;
-  --warn:#F2C26B; --warn-soft:#3A2E14; color-scheme:dark}
-
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.6;direction:rtl}
-.wrap{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;overflow-x:hidden}
+[hidden]{display:none!important}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{font-family:var(--head);line-height:1.3;margin:0;text-wrap:balance}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--head);font-weight:700;font-size:14px;color:var(--cyan);letter-spacing:.2px}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--grad)}
+.sec{padding-block:84px}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:34px;max-width:680px}
+.sec-head h2{font-size:clamp(28px,4.2vw,40px);font-weight:800}
+.sec-head p{margin:0;color:var(--muted);font-size:17.5px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gold-text{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-header.brand{background:var(--navy);color:var(--on-navy)}
-header.brand .wrap{padding-block:22px 20px;display:flex;align-items:center;gap:14px}
-.mark{flex:none;width:52px;height:52px}
-.brand h1{margin:0;font-size:26px;font-weight:800;line-height:1.2;text-wrap:balance}
-.brand p{margin:2px 0 0;font-size:15px;color:var(--on-navy-muted)}
+/* buttons */
+.btn{font:inherit;font-family:var(--head);font-weight:800;font-size:16.5px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 24px;border-radius:999px;border:1.5px solid transparent;text-decoration:none;cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible,.tab:focus-visible,.chip:focus-visible,summary:focus-visible,.pick:focus-within{outline:3px solid var(--gold);outline-offset:3px}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 30px -10px rgba(31,175,90,.7)}
+.btn-wa:hover{background:#19994E}
+.btn-gold{background:var(--gold-grad);color:#121A33;box-shadow:0 10px 30px -12px rgba(233,196,111,.8)}
+.btn-ghost{background:rgba(255,255,255,.06);border-color:var(--line-2);color:var(--ink);backdrop-filter:blur(8px)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn svg{width:20px;height:20px;flex:none}
 
-.progress{background:var(--navy);padding-bottom:16px}
-.progress .wrap{display:flex;align-items:center;gap:12px}
-.bar{flex:1;height:6px;border-radius:3px;background:rgba(246,239,226,.18);overflow:hidden}
-.bar i{display:block;height:100%;width:0;background:#E2B862;border-radius:3px;transition:width .25s ease}
-.count{font-size:14px;color:var(--on-navy-muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(7,14,31,.72);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:18px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}
+.brand img{width:40px;height:40px;border-radius:11px}
+.brand b{font-family:var(--head);font-weight:800;font-size:20px;letter-spacing:.2px}
+.nav ul{list-style:none;display:flex;gap:4px;margin:0 auto 0 0;padding:0}
+.nav ul a{display:block;padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:600;font-size:15.5px}
+.nav ul a:hover{color:var(--ink);background:var(--card)}
+.nav .btn{min-height:44px;padding:8px 18px;font-size:15px}
+@media (max-width:860px){.nav ul{display:none}.nav .btn{margin-inline-start:auto}}
 
-main .wrap{padding-block:22px 130px}
-.step{display:flex;flex-direction:column;gap:18px}
-.step h2{margin:0;font-size:23px;font-weight:800;line-height:1.35;text-wrap:balance}
-.step .lead{margin:-10px 0 0;color:var(--muted);font-size:16px}
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(86vh,760px);display:flex;align-items:center}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(270deg,rgba(7,14,31,.97) 0%,rgba(7,14,31,.90) 38%,rgba(7,14,31,.35) 68%,rgba(7,14,31,.10) 100%),
+  linear-gradient(0deg,var(--bg) 0%,rgba(7,14,31,0) 22%)}
+.hero .wrap{padding-block:72px 84px}
+.hero-copy{max-width:620px;display:flex;flex-direction:column;gap:20px}
+.badge{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 10px;border-radius:999px;background:rgba(233,196,111,.12);border:1px solid rgba(233,196,111,.45);color:var(--gold-2);font-weight:700;font-size:14.5px}
+.badge i{font-style:normal;background:var(--gold-grad);color:#121A33;border-radius:999px;padding:2px 10px;font-family:var(--head);font-weight:800;font-size:13px}
+.hero h1{font-size:clamp(34px,5.6vw,60px);font-weight:800;line-height:1.22}
+.hero p.lead{margin:0;font-size:clamp(17px,1.8vw,19.5px);color:#D3DBEE;max-width:560px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin:6px 0 0;padding:0;list-style:none;color:var(--muted);font-size:15px;font-weight:600}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust li::before{content:"";width:18px;height:18px;flex:none;border-radius:50%;background:rgba(62,210,245,.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%233ED2F5' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+@media (max-width:760px){
+  .hero{min-height:auto;align-items:flex-end}
+  .hero picture,.hero picture img{height:470px;bottom:auto}
+  .hero picture img{object-position:35% 45%}
+  .hero::after{background:linear-gradient(180deg,rgba(7,14,31,.10) 0px,rgba(7,14,31,.15) 230px,rgba(7,14,31,.88) 390px,var(--bg) 470px)}
+  .hero .wrap{padding-top:330px;padding-bottom:44px}
+  .cta-row .btn{flex:1 1 100%}
+}
 
-fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;min-width:0}
-legend{padding:0;margin-bottom:10px;font-weight:700;font-size:16px}
-.opts{display:grid;gap:10px}
-.opts.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.opt{position:relative}
-.opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
-.opt .card{display:flex;flex-direction:column;gap:2px;padding:14px 16px;border:1.5px solid var(--line);border-radius:var(--r);background:var(--surface);min-height:56px;justify-content:center;transition:border-color .15s,background .15s}
-.opt .t{font-weight:700;font-size:17px;line-height:1.35}
-.opt .d{color:var(--muted);font-size:14.5px;line-height:1.45}
-.opt .p{color:var(--gold);font-weight:800;font-size:15.5px;font-variant-numeric:tabular-nums}
-.opt .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
-.opt input:checked + .card{border-color:var(--teal);background:var(--teal-soft)}
-.opt input:focus-visible + .card{outline:3px solid var(--gold);outline-offset:2px}
-.tag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--teal);letter-spacing:.2px}
+/* services */
+.services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1020px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.services{grid-template-columns:1fr}}
+.svc{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .2s ease,border-color .2s ease,background .2s}
+.svc:hover{transform:translateY(-4px);border-color:rgba(142,108,255,.5);background:var(--card-2)}
+.svc .ph{aspect-ratio:4/3;overflow:hidden;background:var(--bg-2)}
+.svc .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.svc:hover .ph img{transform:scale(1.05)}
+.svc .body{display:flex;flex-direction:column;gap:8px;padding:18px 18px 20px;flex:1}
+.svc h3{font-size:20px;font-weight:800}
+.svc p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.65;flex:1}
+.svc .from{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px;padding-top:14px;border-top:1px solid var(--line)}
+.svc .from span{color:var(--soft);font-size:14px}
+.svc .from b{font-family:var(--head);font-size:20px;font-weight:800;color:var(--gold-2)}
+.svc a.more{position:absolute;inset:0;z-index:1}
+.svc .tagline{position:absolute;top:14px;right:14px;z-index:2;background:var(--gold-grad);color:#121A33;font-family:var(--head);font-weight:800;font-size:13px;padding:4px 12px;border-radius:999px}
+.mini-row{margin-top:18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;background:var(--card);border:1px dashed var(--line-2);border-radius:var(--r-sm);color:var(--muted)}
+.mini-row b{color:var(--ink)}
+.mini-row a{color:var(--cyan);font-weight:700;text-decoration:none}
 
-label.f{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:16px}
-label.f small{font-weight:500;color:var(--muted);font-size:14px}
-input[type=text],input[type=date],textarea{font:inherit;font-size:17px;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
-textarea{min-height:96px;resize:vertical}
-input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:1px;border-color:var(--teal)}
+/* launch offer */
+.offer{position:relative;overflow:hidden;border-radius:28px;padding:34px clamp(20px,4vw,48px);background:
+  radial-gradient(600px 220px at 85% 0%,rgba(142,108,255,.35),transparent 70%),
+  radial-gradient(500px 220px at 0% 100%,rgba(62,210,245,.22),transparent 70%),
+  linear-gradient(135deg,#131F48,#0C1634);border:1px solid rgba(233,196,111,.35);display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}
+.offer h2{font-size:clamp(24px,3.4vw,34px);font-weight:800}
+.offer p{margin:8px 0 0;color:#D3DBEE}
+.offer .price-tag{display:flex;align-items:baseline;gap:10px;font-family:var(--head)}
+.offer .price-tag s{color:var(--soft);font-size:20px}
+.offer .price-tag b{font-size:54px;font-weight:800;line-height:1}
+.offer .price-tag small{font-size:18px;color:var(--gold-2);font-weight:700}
+@media (max-width:760px){.offer{grid-template-columns:1fr}.offer .btn{width:100%}}
 
-.slider{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
-.slider .val{display:flex;justify-content:space-between;align-items:baseline;font-weight:700}
-.slider output{font-size:24px;font-weight:800;color:var(--teal);font-variant-numeric:tabular-nums}
-input[type=range]{width:100%;accent-color:var(--teal)}
-.hint{font-size:14px;color:var(--muted);margin:0}
+/* pricing */
+.tabs{display:flex;gap:6px;padding:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;width:max-content;max-width:100%;overflow-x:auto;scrollbar-width:none;margin-bottom:26px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{font:inherit;font-family:var(--head);font-weight:700;font-size:15.5px;white-space:nowrap;border:0;background:transparent;color:var(--muted);padding:10px 18px;border-radius:999px;cursor:pointer;min-height:44px}
+.tab[aria-selected="true"]{background:var(--grad);color:#0A1228}
+.plans{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.plan{position:relative;display:flex;flex-direction:column;gap:14px;padding:24px 22px 22px;background:var(--card);border:1px solid var(--line);border-radius:var(--r)}
+.plan.hot{background:linear-gradient(180deg,rgba(142,108,255,.18),rgba(142,108,255,.04));border-color:rgba(142,108,255,.6)}
+.plan .flag{position:absolute;top:-12px;right:18px;background:var(--gold-grad);color:#121A33;font-family:var(--head);font-weight:800;font-size:12.5px;padding:3px 12px;border-radius:999px}
+.plan h3{font-size:19px;font-weight:800}
+.plan .amt{display:flex;align-items:baseline;gap:8px;font-family:var(--head)}
+.plan .amt b{font-size:40px;font-weight:800;line-height:1.05}
+.plan .amt span{color:var(--muted);font-weight:700}
+.plan .amt s{color:var(--soft);font-size:18px}
+.plan .note{margin:-8px 0 0;font-size:13.5px;color:var(--gold-2);font-weight:600}
+.plan ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;color:#D3DBEE;font-size:15.5px;flex:1}
+.plan li{display:flex;gap:10px;align-items:flex-start}
+.plan li::before{content:"";margin-top:6px;width:16px;height:16px;flex:none;border-radius:50%;background:rgba(62,210,245,.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%233ED2F5' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/11px no-repeat}
+.plan .btn{width:100%;min-height:48px;font-size:15.5px}
+.plan .btn-ghost{border-color:rgba(142,108,255,.55)}
+.fine{margin:18px 0 0;padding:14px 18px;border-radius:var(--r-sm);background:rgba(233,196,111,.08);border:1px solid rgba(233,196,111,.25);color:#E8DDC0;font-size:15px}
 
-.note{border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.55;background:var(--gold-soft);color:var(--ink)}
-.note.warn{background:var(--warn-soft);color:var(--ink)}
-.note.warn b{color:var(--warn)}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s;padding:0;margin:0;list-style:none}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;padding:22px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.steps li::before{content:counter(s);width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--grad);color:#0A1228;font-family:var(--head);font-weight:800;font-size:20px}
+.steps h3{font-size:18px;font-weight:800}
+.steps p{margin:0;color:var(--muted);font-size:15.5px}
 
-.reco{background:var(--teal-soft);border:1.5px solid var(--teal);border-radius:var(--r);padding:14px 16px}
-.reco b{color:var(--teal)}
+/* policy */
+.policy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.policy{grid-template-columns:1fr}}
+.pol{padding:22px;border-radius:var(--r);background:var(--card);border:1px solid var(--line)}
+.pol h3{font-size:18px;font-weight:800;display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.pol h3 em{font-style:normal;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:rgba(233,196,111,.14);font-size:18px}
+.pol ul{margin:0;padding:0 18px 0 0;color:#D3DBEE;font-size:15.5px;display:flex;flex-direction:column;gap:6px}
+.pol li::marker{color:var(--gold)}
 
-.summary{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden}
-.summary dl{margin:0;display:grid;grid-template-columns:auto 1fr}
-.summary dt,.summary dd{margin:0;padding:10px 16px;border-bottom:1px solid var(--line);font-size:15.5px}
-.summary dt{color:var(--muted);white-space:nowrap}
-.summary dd{font-weight:700;min-width:0;overflow-wrap:anywhere}
-.price{background:var(--navy);color:var(--on-navy);padding:16px;display:flex;flex-direction:column;gap:2px}
-.price span{font-size:14px;color:var(--on-navy-muted)}
-.price strong{font-size:28px;font-weight:800;color:#F0CB7A;font-variant-numeric:tabular-nums;line-height:1.3}
+/* faq */
+.faq{display:flex;flex-direction:column;gap:10px;max-width:860px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--r-sm);padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0;font-family:var(--head);font-weight:700;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--card-2);color:var(--cyan);font-size:20px;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 18px;color:var(--muted)}
 
-.actions{position:fixed;inset:auto 0 0 0;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
-.actions .wrap{display:flex;gap:10px;padding-block:12px}
-.btn{font:inherit;font-weight:800;font-size:17px;border-radius:12px;padding:13px 18px;border:1.5px solid transparent;cursor:pointer;min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}
-.btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-.btn.primary{flex:1;background:var(--teal);color:#fff}
-:root[data-theme="dark"] .btn.primary{color:#06231F}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#06231F}}
-.btn.primary[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
-.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn.wa{flex:1;background:#1F8F55;color:#fff}
+/* order */
+.order{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:20px;align-items:start}
+@media (max-width:940px){.order{grid-template-columns:1fr}}
+.panel{background:var(--bg-2);border:1px solid var(--line);border-radius:24px;padding:clamp(18px,3vw,28px);display:flex;flex-direction:column;gap:22px}
+.field{display:flex;flex-direction:column;gap:10px;min-width:0}
+.field>.lbl{font-family:var(--head);font-weight:700;font-size:16.5px;display:flex;gap:10px;align-items:center}
+.field>.lbl .n{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:var(--grad);color:#0A1228;font-size:14px;font-weight:800}
+.field small{color:var(--soft);font-weight:500;font-size:13.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.chip span{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line-2);background:var(--card);font-weight:600;font-size:15.5px;transition:all .15s}
+.chip input:checked+span{background:rgba(62,210,245,.14);border-color:var(--cyan);color:#fff}
+.chip input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+.picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.pick{position:relative}
+.pick input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.pick .c{display:flex;flex-direction:column;gap:2px;padding:14px 16px;border-radius:var(--r-sm);border:1.5px solid var(--line-2);background:var(--card);height:100%;transition:all .15s}
+.pick .c b{font-size:16px;font-family:var(--head)}
+.pick .c span{color:var(--gold-2);font-family:var(--head);font-weight:800}
+.pick .c small{color:var(--soft)}
+.pick input:checked+.c{border-color:var(--violet);background:rgba(142,108,255,.16)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid2{grid-template-columns:1fr}}
+label.in{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px;color:#D3DBEE;min-width:0}
+input[type=text],input[type=date],textarea{font:inherit;font-size:16.5px;color:var(--ink);background:rgba(255,255,255,.05);border:1.5px solid var(--line-2);border-radius:12px;padding:12px 14px;width:100%;min-width:0}
+input[type=date]{color-scheme:dark}
+textarea{min-height:92px;resize:vertical}
+input:focus-visible,textarea:focus-visible{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(62,210,245,.25)}
+::placeholder{color:#7381A1}
+.range{display:flex;flex-direction:column;gap:6px;padding:14px 16px;border-radius:var(--r-sm);background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.range .row{display:flex;justify-content:space-between;align-items:baseline;font-weight:600}
+.range output{font-family:var(--head);font-weight:800;font-size:22px;color:var(--cyan)}
+input[type=range]{width:100%;accent-color:var(--violet)}
+.hint{margin:0;color:var(--soft);font-size:14px}
+.toggle{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line-2);background:rgba(255,255,255,.04);cursor:pointer;font-weight:600}
+.toggle input{width:20px;height:20px;accent-color:var(--gold)}
+.alert{padding:12px 14px;border-radius:12px;background:rgba(233,196,111,.10);border:1px solid rgba(233,196,111,.3);color:#EEDFB8;font-size:14.5px}
+.summary{position:sticky;top:84px;background:linear-gradient(180deg,#121F49,#0B1530);border:1px solid rgba(142,108,255,.4);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.summary h3{font-size:19px;font-weight:800}
+.summary dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:15px}
+.summary dt{color:var(--soft)}
+.summary dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+.total{display:flex;flex-direction:column;gap:2px;padding:14px 16px;border-radius:var(--r-sm);background:rgba(7,14,31,.55);border:1px solid var(--line)}
+.total span{color:var(--soft);font-size:14px}
+.total b{font-family:var(--head);font-size:34px;font-weight:800;line-height:1.2}
+.total em{font-style:normal;color:var(--gold-2);font-size:14px;font-weight:600}
+.summary .btn{width:100%}
+.summary .err{margin:0;color:#FFC9A8;font-size:14px;text-align:center}
+.summary .small{margin:0;color:var(--soft);font-size:13.5px;text-align:center}
+@media (max-width:940px){.summary{position:static}}
 
-.done{text-align:center;display:flex;flex-direction:column;gap:14px;align-items:center;padding-top:10px}
-.done .ok{width:64px;height:64px}
-.restart{background:none;border:0;color:var(--teal);font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;padding:6px}
-footer{color:var(--muted);font-size:13.5px;text-align:center;padding-top:26px}
-@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+/* footer */
+footer{border-top:1px solid var(--line);padding-block:40px calc(40px + env(safe-area-inset-bottom,0px));background:#050B19}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.foot-brand{display:flex;align-items:center;gap:14px}
+.foot-brand img{width:64px;height:64px;border-radius:16px}
+.foot-brand p{margin:0;color:var(--soft);font-size:14px}
+.socials{display:flex;gap:10px;flex-wrap:wrap}
+.socials a{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;background:var(--card);border:1px solid var(--line);text-decoration:none;font-weight:600;font-size:14.5px}
+.socials a:hover{background:var(--card-2)}
+.socials svg{width:18px;height:18px}
+.copy{width:100%;color:var(--soft);font-size:13.5px;margin:0}
+
+/* floating whatsapp */
+.fab{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--wa);box-shadow:0 12px 30px -8px rgba(31,175,90,.8);transition:transform .2s}
+.fab:hover{transform:scale(1.06)}
+.fab.off{opacity:0;pointer-events:none;transform:translateY(12px)}
+.fab{transition:opacity .25s,transform .25s}
+.fab svg{width:30px;height:30px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 </style>
 </head>
 <body>
 
-<header class="brand">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.8 2 6.8L3.6 29l6.6-1.7c1.8 1 3.8 1.5 5.9 1.5 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.4 10 10.1 5.4 16 5.4s10.6 4.6 10.6 10.4S21.9 26.4 16 26.4zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.5z"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-1.8-2.5V9.7a5.8 5.8 0 1 0 4.9 5.7V9.1a7.3 7.3 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.3 4.7H5.5l11.2 14.5z"/></symbol>
+</svg>
+
+<header class="nav">
   <div class="wrap">
-    <svg class="mark" viewBox="-200 -170 400 340" aria-hidden="true">
-      <defs><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0CB7A"/><stop offset="1" stop-color="#D9A94A"/></linearGradient></defs>
-      <rect x="-190" y="-150" width="380" height="250" rx="26" fill="#0D1B2E" stroke="url(#gg)" stroke-width="16"/>
-      <rect x="-24" y="100" width="48" height="50" fill="url(#gg)"/>
-      <rect x="-96" y="146" width="192" height="18" rx="9" fill="url(#gg)"/>
-      <path d="M-92 -98 H6 a72 72 0 0 1 0 144 H-38 V62 H-92 Z M-38 -52 V0 H2 a26 26 0 0 0 0 -52 Z" fill="url(#gg)" fill-rule="evenodd"/>
-      <circle cx="112" cy="28" r="46" fill="#2EC4B6"/>
-      <path d="M97 5 L135 28 L97 51 Z" fill="#0D1B2E"/>
-    </svg>
-    <div>
-      <h1>إنجاز رقمي</h1>
-      <p>اطلب عرضك أو فيديوك خلال دقيقتين</p>
-    </div>
+    <a class="brand" href="#top" aria-label="إنجاز رقمي — الرئيسية"><img src="img/mark.png" alt="" width="40" height="40"><b>إنجاز رقمي</b></a>
+    <nav aria-label="أقسام الصفحة"><ul>
+      <li><a href="#services">الخدمات</a></li>
+      <li><a href="#prices">الأسعار</a></li>
+      <li><a href="#how">كيف نشتغل</a></li>
+      <li><a href="#faq">الأسئلة</a></li>
+    </ul></nav>
+    <a class="btn btn-gold" href="#order">اطلب الآن</a>
   </div>
 </header>
-<div class="progress" id="progressWrap">
+
+<main id="top">
+<section class="hero">
+  <picture>
+    <source media="(max-width: 760px)" srcset="img/hero-m.webp" type="image/webp">
+    <source srcset="img/hero.webp" type="image/webp">
+    <img src="img/hero.jpg" alt="" fetchpriority="high">
+  </picture>
   <div class="wrap">
-    <div class="bar" role="progressbar" aria-label="تقدم الطلب" aria-valuemin="0" aria-valuemax="100" id="bar"><i id="barFill"></i></div>
-    <span class="count" id="count">1 من 6</span>
-  </div>
-</div>
-
-<main>
-<div class="wrap">
-<form id="form" novalidate>
-
-<!-- ROLE -->
-<section class="step" data-step="role">
-  <h2>أهلًا بك 🌷 من أنت؟</h2>
-  <p class="lead">نخصص الأسئلة على حسب اختيارك.</p>
-  <fieldset><legend class="sr" hidden>الفئة</legend>
-    <div class="opts">
-      <label class="opt"><input type="radio" name="role" id="role-teacher" value="teacher"><span class="card"><span class="t">معلمة / معلم</span><span class="d">عروض دروس وأنشطة للطلاب</span></span></label>
-      <label class="opt"><input type="radio" name="role" id="role-student" value="student"><span class="card"><span class="t">طالب / طالبة جامعة</span><span class="d">تكاليف ومشاريع ومناقشات</span></span></label>
-      <label class="opt"><input type="radio" name="role" id="role-other" value="other"><span class="card"><span class="t">أخرى</span><span class="d">جهة أو مشروع أو طلب شخصي</span></span></label>
-    </div>
-  </fieldset>
-</section>
-
-<!-- SERVICE -->
-<section class="step" data-step="service" hidden>
-  <h2>وش الخدمة اللي تحتاجها؟</h2>
-  <fieldset><legend hidden>الخدمة</legend>
-    <div class="opts">
-      <label class="opt"><input type="radio" name="service" id="svc-ppt" value="ppt"><span class="card"><span class="t">عرض PowerPoint</span><span class="d">تنسيق أو تصميم أو إعداد كامل</span></span></label>
-      <label class="opt"><input type="radio" name="service" id="svc-video" value="video"><span class="card"><span class="t">فيديو شرح بالذكاء الاصطناعي</span><span class="d">نص وصوت ومشاهد ومونتاج بسيط</span></span></label>
-      <label class="opt"><input type="radio" name="service" id="svc-combo" value="combo"><span class="card"><span class="row"><span class="t">عرض PowerPoint + فيديو شرح</span><span class="p">خصم 10%</span></span><span class="d">اختر باقة العرض ومدة الفيديو، وتحصل على خصم 10% من مجموعهما</span></span></label>
-      <label class="opt"><input type="radio" name="service" id="svc-bteacher" value="bteacher"><span class="card"><span class="row"><span class="t">باقة المعلمات</span><span class="p">من 250 إلى 450 ﷼</span></span><span class="d">عرض تعليمي تفاعلي حتى 15 شريحة بأسئلة وأنشطة + فيديو شرح للدرس حتى 30 ثانية</span></span></label>
-      <label class="opt"><input type="radio" name="service" id="svc-bstudent" value="bstudent"><span class="card"><span class="row"><span class="t">باقة طلاب الجامعات</span><span class="p">من 199 إلى 320 ﷼</span></span><span class="d">عرض طلابي حتى 10 شرائح من محتواك + فيديو قصير حتى 30 ثانية يلخص العرض</span></span></label>
-      <label class="opt"><input type="radio" name="service" id="svc-e" value="eservice"><span class="card"><span class="t">خدمة إلكترونية</span><span class="d">تنسيق ملفات ونماذج، إدخال بيانات، مهام رقمية</span></span></label>
-    </div>
-  </fieldset>
-</section>
-
-<!-- PACKAGE -->
-<section class="step" data-step="pkg" hidden>
-  <h2>اختر الباقة</h2>
-  <p class="lead">الأسعار تقديرية، والسعر النهائي بعد مراجعة طلبك.</p>
-  <fieldset><legend hidden>الباقة</legend>
-    <div class="opts" id="pkgList"></div>
-  </fieldset>
-  <div id="helpBox" hidden>
-    <fieldset>
-      <legend>وش عندك حاليًا؟</legend>
-      <div class="opts">
-        <label class="opt"><input type="radio" name="has" id="has-deck" value="deck"><span class="card"><span class="t">عرض جاهز وأبي تنسيقه</span></span></label>
-        <label class="opt"><input type="radio" name="has" id="has-content" value="content"><span class="card"><span class="t">محتوى جاهز وأبي تصميم العرض</span></span></label>
-        <label class="opt"><input type="radio" name="has" id="has-none" value="none"><span class="card"><span class="t">أبي إعداد المحتوى والتصميم</span></span></label>
+    <div class="hero-copy">
+      <span class="badge"><i>عرض الإطلاق</i> إعلانك الأساسي بـ 99 ريال بدل 129</span>
+      <h1>إعلان فيديو بالذكاء الاصطناعي <span class="gold-text">يخلّي منتجك يبيع</span></h1>
+      <p class="lead">نصمم لمتجرك ومشروعك إعلان فيديو سينمائي بصوت سعودي احترافي، ونجهز عروض PowerPoint وفيديوهات شرح وسيرة ذاتية احترافية. أسعارنا واضحة من البداية.</p>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="#order"><svg aria-hidden="true"><use href="#i-wa"/></svg>اطلب إعلانك الآن</a>
+        <a class="btn btn-ghost" href="#prices">شوف الأسعار</a>
       </div>
-    </fieldset>
-    <div class="slider" style="margin-top:12px">
-      <div class="val"><label for="helpSlides">كم شريحة تقريبًا؟</label><output id="helpSlidesOut" for="helpSlides">10</output></div>
-      <input type="range" id="helpSlides" min="3" max="40" value="10">
+      <ul class="trust">
+        <li>صوت سعودي احترافي</li>
+        <li>تعديلان مجانًا</li>
+        <li>جاهز لتيك توك وسناب وإنستقرام</li>
+      </ul>
     </div>
-    <div class="reco" id="reco" hidden style="margin-top:12px"></div>
   </div>
 </section>
 
-<!-- DETAILS (ppt) -->
-<section class="step" data-step="details" hidden>
-  <h2>تفاصيل العرض</h2>
-  <div id="teacherFields" style="display:flex;flex-direction:column;gap:14px">
-    <label class="f" for="subject">المادة<input type="text" id="subject" placeholder="مثال: لغتي"></label>
-    <label class="f" for="grade">الصف أو المرحلة<input type="text" id="grade" placeholder="مثال: الرابع الابتدائي"></label>
-    <label class="f" for="lesson">عنوان الدرس<input type="text" id="lesson" placeholder="مثال: الجملة الفعلية"></label>
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">خدماتنا</span>
+      <h2>كل اللي يحتاجه مشروعك <span class="grad-text">في مكان واحد</span></h2>
+      <p>اختر الخدمة وشوف أسعارها مباشرة، والطلب كله يتم على واتساب.</p>
+    </div>
+    <div class="services">
+      <article class="svc reveal">
+        <span class="tagline">الأقوى للمتاجر</span>
+        <div class="ph"><img src="img/ads.webp" alt="ثلاث شاشات فيديو تعرض إعلانات منتجات" loading="lazy" width="800" height="800"></div>
+        <div class="body">
+          <h3>إعلانات فيديو بالذكاء الاصطناعي</h3>
+          <p>فكرة وسكربت ومشاهد سينمائية لمنتجك، بصوت سعودي ومونتاج جاهز للنشر.</p>
+          <div class="from"><span>يبدأ من</span><b>99 ريال</b></div>
+        </div>
+        <a class="more" href="#prices" data-tab="ads" aria-label="أسعار إعلانات الفيديو"></a>
+      </article>
+      <article class="svc reveal">
+        <div class="ph"><img src="img/ppt.webp" alt="لابتوب يعرض شرائح عرض تقديمي" loading="lazy" width="800" height="800"></div>
+        <div class="body">
+          <h3>عروض PowerPoint</h3>
+          <p>للمعلمين والمعلمات وطلاب الجامعات: تنسيق أو تصميم أو إعداد كامل مع المحتوى.</p>
+          <div class="from"><span>يبدأ من</span><b>69 ريال</b></div>
+        </div>
+        <a class="more" href="#prices" data-tab="ppt" aria-label="أسعار عروض PowerPoint"></a>
+      </article>
+      <article class="svc reveal">
+        <div class="ph"><img src="img/explainer.webp" alt="جهاز لوحي يعرض فيديو شرح تعليمي" loading="lazy" width="800" height="800"></div>
+        <div class="body">
+          <h3>فيديو شرح بالذكاء الاصطناعي</h3>
+          <p>شرح درس أو فكرة أو منتج في فيديو قصير واضح، بنص وصوت ومشاهد مناسبة.</p>
+          <div class="from"><span>يبدأ من</span><b>99 ريال</b></div>
+        </div>
+        <a class="more" href="#prices" data-tab="explainer" aria-label="أسعار فيديو الشرح"></a>
+      </article>
+      <article class="svc reveal">
+        <div class="ph"><img src="img/cv.webp" alt="سيرة ذاتية احترافية على مكتب" loading="lazy" width="800" height="800"></div>
+        <div class="body">
+          <h3>السيرة الذاتية والتوظيف</h3>
+          <p>سيرة متوافقة مع أنظمة ATS بالعربي والإنجليزي، وتحسين لينكدإن والتقديم على الوظائف.</p>
+          <div class="from"><span>يبدأ من</span><b>49 ريال</b></div>
+        </div>
+        <a class="more" href="#prices" data-tab="cv" aria-label="أسعار السيرة الذاتية"></a>
+      </article>
+    </div>
+    <div class="mini-row reveal"><span><b>خدمات إلكترونية:</b> خطاب، تنسيق ملف، ومهام رقمية بسيطة — تبدأ من 49 ريال.</span><a href="#order" data-svc="eservice">اطلبها ←</a></div>
   </div>
-  <div id="studentFields" style="display:flex;flex-direction:column;gap:14px">
-    <label class="f" for="course">المقرر أو المجال<input type="text" id="course" placeholder="مثال: إدارة سلاسل الإمداد"></label>
-    <label class="f" for="topic">عنوان العرض<input type="text" id="topic" placeholder="اكتب الموضوع"></label>
-    <fieldset id="kindSet"><legend>نوع العرض</legend>
-      <div class="opts two">
-        <label class="opt"><input type="radio" name="kind" id="kind-task" value="تكليف"><span class="card"><span class="t">تكليف</span></span></label>
-        <label class="opt"><input type="radio" name="kind" id="kind-proj" value="مشروع"><span class="card"><span class="t">مشروع</span></span></label>
-        <label class="opt"><input type="radio" name="kind" id="kind-def" value="مناقشة"><span class="card"><span class="t">مناقشة</span></span></label>
-        <label class="opt"><input type="radio" name="kind" id="kind-oth" value="أخرى"><span class="card"><span class="t">أخرى</span></span></label>
+</section>
+
+<section class="wrap reveal" aria-labelledby="offerTitle">
+  <div class="offer">
+    <div>
+      <span class="eyebrow">لأول 15 عميل فقط</span>
+      <h2 id="offerTitle" style="margin-top:8px">عرض الإطلاق: <span class="gold-text">إعلانك الأساسي بـ 99 ريال</span></h2>
+      <p>وخصم 20% على باقي الخدمات مقابل تقييمك الصادق بعد التسليم.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;align-items:stretch">
+      <div class="price-tag"><s>129</s><b class="gold-text">99</b><small>ريال</small></div>
+      <a class="btn btn-gold" href="#order" data-plan="ad-basic">احجز مكانك</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="prices">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">الأسعار</span>
+      <h2>أسعار واضحة <span class="grad-text">بدون مفاجآت</span></h2>
+      <p>كل الأسعار بالريال السعودي، واضغط «اطلب» على الباقة اللي تناسبك.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="فئات الأسعار">
+      <button class="tab" role="tab" id="tab-ads" aria-controls="plans" aria-selected="true" data-cat="ads">🎬 إعلانات فيديو</button>
+      <button class="tab" role="tab" id="tab-ppt" aria-controls="plans" aria-selected="false" data-cat="ppt">📊 عروض PowerPoint</button>
+      <button class="tab" role="tab" id="tab-explainer" aria-controls="plans" aria-selected="false" data-cat="explainer">🎥 فيديو شرح</button>
+      <button class="tab" role="tab" id="tab-cv" aria-controls="plans" aria-selected="false" data-cat="cv">📄 السيرة الذاتية</button>
+    </div>
+    <div id="plans" class="plans" role="tabpanel" aria-labelledby="tab-ads"></div>
+    <p class="fine" id="planFine"></p>
+  </div>
+</section>
+
+<section class="sec" id="how" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">كيف نشتغل</span>
+      <h2>من طلبك إلى ملفك النهائي <span class="grad-text">في 4 خطوات</span></h2>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><h3>أرسل طلبك</h3><p>اختر الخدمة والباقة من النموذج، ويوصلنا طلبك جاهز على واتساب خلال دقيقة.</p></li>
+      <li class="reveal"><h3>نتفق على التفاصيل</h3><p>نراجع طلبك ونأكد لك السعر وموعد التسليم قبل ما نبدأ.</p></li>
+      <li class="reveal"><h3>ننفّذ ونرسل المعاينة</h3><p>نشتغل على طلبك ونرسل لك معاينة تشوفها وتعطينا رأيك.</p></li>
+      <li class="reveal"><h3>تستلم ملفاتك</h3><p>نسلمك النسخة النهائية بجودة عالية، ولك تعديلان مجانًا.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="policy" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">الدفع والسياسات</span>
+      <h2>شروط واضحة <span class="grad-text">تحفظ حقك وحقنا</span></h2>
+    </div>
+    <div class="policy">
+      <div class="pol reveal"><h3><em>💳</em>الدفع</h3><ul>
+        <li>الطلبات أقل من 150 ريال: الدفع كامل قبل البدء.</li>
+        <li>الطلبات من 150 ريال فأكثر: عربون 50%، والباقي بعد ما تشوف المعاينة.</li>
+        <li>الدفع بالتحويل البنكي، ونرسل لك البيانات في المحادثة.</li>
+      </ul></div>
+      <div class="pol reveal"><h3><em>✏️</em>التعديلات</h3><ul>
+        <li>تعديلان مجانًا ضمن نطاق الطلب المتفق عليه.</li>
+        <li>التعديل الإضافي: 15 ريال للعروض والسيرة الذاتية، و39 ريال للفيديو.</li>
+        <li>تغيير الفكرة بعد اعتماد السكربت يُسعّر بشكل مستقل.</li>
+      </ul></div>
+      <div class="pol reveal"><h3><em>⚡</em>الاستعجال والمعاينة</h3><ul>
+        <li>الطلب المستعجل: +40% على السعر (بحد أدنى 30 ريال).</li>
+        <li>معاينة الفيديو تكون بعلامة مائية حتى إتمام الدفع.</li>
+        <li>نأكد لك موعد التسليم قبل البدء.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">أسئلة شائعة</span>
+      <h2>عندك سؤال؟</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal"><summary>وش أحتاج أرسل لكم عشان إعلان منتجي؟</summary><p>صور واضحة للمنتج (صور الجوال تكفي)، واسم المتجر وشعاره إن وجد، والعرض أو الرسالة اللي تبي توصل للعميل. ونساعدك في الفكرة والسكربت إذا تحتاج.</p></details>
+      <details class="reveal"><summary>كم ياخذ وقت التنفيذ؟</summary><p>يعتمد على الخدمة وحجم الطلب، ونحدد معك موعد التسليم قبل ما نبدأ. وإذا تحتاجه بسرعة، نقدر نستعجله برسوم الاستعجال.</p></details>
+      <details class="reveal"><summary>هل الصوت باللهجة السعودية؟</summary><p>إيه، نستخدم أصواتًا احترافية بلهجة سعودية طبيعية، ونختار الصوت المناسب لهوية مشروعك.</p></details>
+      <details class="reveal"><summary>أقدر أنشر الإعلان في أي منصة؟</summary><p>إيه، نسلمك الفيديو بجودة عالية وجاهز للنشر في تيك توك وسناب شات وإنستقرام وواتساب.</p></details>
+      <details class="reveal"><summary>هل تضمنون التوظيف أو المقابلة؟</summary><p>لا، نجهز سيرتك وملفك باحتراف عشان تتقدم بأفضل صورة، لكن قرار المقابلة والتوظيف يرجع لجهة العمل.</p></details>
+      <details class="reveal"><summary>كيف أدفع؟</summary><p>بالتحويل البنكي. الطلبات أقل من 150 ريال تُدفع كاملة قبل البدء، والطلبات من 150 ريال فأكثر بعربون 50% والباقي بعد المعاينة.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="order" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">اطلب الآن</span>
+      <h2>جهّز طلبك <span class="grad-text">خلال دقيقة</span></h2>
+      <p>اختر الخدمة والباقة واكتب التفاصيل، ويوصلنا طلبك جاهز على واتساب مع السعر.</p>
+    </div>
+    <form class="order" id="form" novalidate>
+      <div class="panel">
+        <fieldset class="field" style="border:0;margin:0;padding:0">
+          <legend class="lbl"><span class="n">1</span>وش الخدمة؟</legend>
+          <div class="chips" id="svcChips"></div>
+        </fieldset>
+        <fieldset class="field" style="border:0;margin:0;padding:0" id="planField" hidden>
+          <legend class="lbl"><span class="n">2</span>اختر الباقة</legend>
+          <div class="picks" id="planPicks"></div>
+        </fieldset>
+        <div class="field" id="detailsField" hidden>
+          <div class="lbl"><span class="n">3</span>التفاصيل</div>
+          <div id="detailsBox" style="display:flex;flex-direction:column;gap:12px"></div>
+        </div>
+        <div class="field" id="whenField" hidden>
+          <div class="lbl"><span class="n">4</span>الموعد والتواصل</div>
+          <div class="grid2">
+            <label class="in" for="date">موعد التسليم المطلوب<input type="date" id="date"></label>
+            <label class="in" for="name"><span>اسمك <small>اختياري</small></span><input type="text" id="name" placeholder="مثال: أبو فهد" autocomplete="name"></label>
+          </div>
+          <label class="toggle"><input type="checkbox" id="rush"><span>أحتاجه مستعجل <small>(+40% بحد أدنى 30 ريال)</small></span></label>
+        </div>
       </div>
-    </fieldset>
-  </div>
-  <div class="slider">
-    <div class="val"><label for="slides">عدد الشرائح</label><output id="slidesOut" for="slides">10</output></div>
-    <input type="range" id="slides" min="3" max="40" value="10">
-    <p class="hint" id="slidesHint"></p>
-  </div>
-  <fieldset id="contentSet"><legend>المحتوى</legend>
-    <div class="opts two">
-      <label class="opt"><input type="radio" name="content" id="content-ready" value="ready"><span class="card"><span class="t">جاهز</span><span class="d">بأرسله في المحادثة</span></span></label>
-      <label class="opt"><input type="radio" name="content" id="content-need" value="need"><span class="card"><span class="t">أحتاج إعداده</span><span class="d">تجهزونه لي</span></span></label>
-    </div>
-  </fieldset>
-  <div class="note" id="contentNote" hidden></div>
-  <fieldset id="interSet"><legend>أسئلة أو أنشطة تفاعلية داخل العرض؟</legend>
-    <div class="opts two">
-      <label class="opt"><input type="radio" name="inter" id="inter-yes" value="نعم"><span class="card"><span class="t">نعم</span></span></label>
-      <label class="opt"><input type="radio" name="inter" id="inter-no" value="لا"><span class="card"><span class="t">لا</span></span></label>
-    </div>
-  </fieldset>
-  <fieldset><legend>لغة العرض</legend>
-    <div class="opts two">
-      <label class="opt"><input type="radio" name="lang" id="lang-ar" value="عربي"><span class="card"><span class="t">عربي</span></span></label>
-      <label class="opt"><input type="radio" name="lang" id="lang-en" value="إنجليزي"><span class="card"><span class="t">إنجليزي</span></span></label>
-    </div>
-  </fieldset>
-</section>
-
-<!-- STYLE (ppt) -->
-<section class="step" data-step="style" hidden>
-  <h2>الطابع المفضل</h2>
-  <p class="lead">اختياري، يساعدنا نوصل للشكل اللي يعجبك.</p>
-  <fieldset><legend hidden>الطابع</legend>
-    <div class="opts two">
-      <label class="opt"><input type="radio" name="style" id="style-formal" value="رسمي"><span class="card"><span class="t">رسمي</span><span class="d">هادئ ومرتب</span></span></label>
-      <label class="opt"><input type="radio" name="style" id="style-kids" value="مبهج للأطفال"><span class="card"><span class="t">مبهج</span><span class="d">ألوان وحيوية للصغار</span></span></label>
-      <label class="opt"><input type="radio" name="style" id="style-acad" value="أكاديمي"><span class="card"><span class="t">أكاديمي</span><span class="d">مناسب للجامعة</span></span></label>
-      <label class="opt"><input type="radio" name="style" id="style-any" value="اتركوه لكم"><span class="card"><span class="t">اتركوه لكم</span><span class="d">نختار الأنسب</span></span></label>
-    </div>
-  </fieldset>
-  <label class="f" for="notes">ملاحظات <small>اختياري</small><textarea id="notes" placeholder="أي تفاصيل تحب نعرفها: ألوان معينة، عناصر لازم تكون موجودة…"></textarea></label>
-</section>
-
-<!-- VIDEO -->
-<section class="step" data-step="video" hidden>
-  <h2>تفاصيل الفيديو</h2>
-  <p class="lead" id="comboLead" hidden>الفيديو يكون عن نفس موضوع العرض.</p>
-  <label class="f" for="vtopic" id="vtopicLabel">موضوع الفيديو<input type="text" id="vtopic" placeholder="مثال: شرح درس الكسور، أو تعريف بمشروعي"></label>
-  <fieldset><legend>المدة</legend>
-    <div class="opts" id="durList"></div>
-  </fieldset>
-  <fieldset><legend>النص</legend>
-    <div class="opts two">
-      <label class="opt"><input type="radio" name="script" id="script-ready" value="جاهز"><span class="card"><span class="t">جاهز</span><span class="d">بأرسله</span></span></label>
-      <label class="opt"><input type="radio" name="script" id="script-need" value="أحتاج كتابته"><span class="card"><span class="t">أحتاج كتابته</span></span></label>
-    </div>
-  </fieldset>
-  <fieldset><legend>الصوت</legend>
-    <div class="opts two">
-      <label class="opt"><input type="radio" name="voice" id="voice-ai" value="صوت بالذكاء الاصطناعي"><span class="card"><span class="t">صوت AI</span></span></label>
-      <label class="opt"><input type="radio" name="voice" id="voice-text" value="نصوص على الشاشة"><span class="card"><span class="t">نصوص على الشاشة</span></span></label>
-    </div>
-  </fieldset>
-  <fieldset><legend>ترجمة؟</legend>
-    <div class="opts two">
-      <label class="opt"><input type="radio" name="trans" id="trans-no" value="لا"><span class="card"><span class="t">لا</span></span></label>
-      <label class="opt"><input type="radio" name="trans" id="trans-yes" value="نعم"><span class="card"><span class="t">نعم</span></span></label>
-    </div>
-  </fieldset>
-  <label class="f" for="vnotes">ملاحظات <small>اختياري</small><textarea id="vnotes" placeholder="الهدف من الفيديو، أسلوب معين، أمثلة تعجبك…"></textarea></label>
-</section>
-
-<!-- E-SERVICE -->
-<section class="step" data-step="eservice" hidden>
-  <h2>صف لنا الخدمة</h2>
-  <p class="lead">نراجع كل طلب أولًا للتأكد من إمكانية تنفيذه، والسعر والمدة على حسب نوع المهمة والجهد المطلوب.</p>
-  <label class="f" for="edesc">وش المطلوب؟<textarea id="edesc" placeholder="مثال: تنسيق ملف وورد 12 صفحة، أو إدخال بيانات من ملف PDF إلى Excel"></textarea></label>
-</section>
-
-<!-- SUMMARY -->
-<section class="step" data-step="summary" hidden>
-  <h2>الموعد والملخص</h2>
-  <label class="f" for="date">موعد التسليم المطلوب<input type="date" id="date"></label>
-  <div class="note warn" id="rushNote" hidden><b>موعد قريب:</b> المواعيد القريبة قد تؤثر على السعر، ونأكد لك إمكانية التسليم قبل البدء.</div>
-  <div class="summary">
-    <div class="price"><span id="priceLabel">السعر التقديري</span><strong id="priceVal">—</strong><span>تقديري، والسعر النهائي يتحدد بعد معرفة تفاصيل الطلب</span></div>
-    <dl id="sumList"></dl>
-  </div>
-  <div class="note">بعد الإرسال أرسل <b>ملف المحتوى وأي صور أو شعار</b> في نفس المحادثة.</div>
-</section>
-
-<!-- DONE -->
-<section class="step" data-step="done" hidden>
-  <div class="done">
-    <svg class="ok" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="var(--teal-soft)" stroke="var(--teal)" stroke-width="3"/><path d="M19 33 l9 9 l17 -19" fill="none" stroke="var(--teal)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <h2>تم تجهيز طلبك ✅</h2>
-    <p class="lead" style="margin:0">إذا ما انفتح واتساب، اضغط الزر مرة ثانية. لا تنسَ ترسل ملف المحتوى وأي صور في المحادثة.</p>
-    <p class="lead" style="margin:0">نرد عليك بالسعر النهائي خلال ساعات العمل يوميًا من 8:00 صباحًا إلى 11:00 مساءً.</p>
-    <a class="btn wa" id="waAgain" href="#" target="_blank" rel="noopener" style="width:100%">افتح واتساب مرة ثانية</a>
-    <button type="button" class="restart" id="restart">ابدأ طلبًا جديدًا</button>
+      <aside class="summary" aria-live="polite">
+        <h3>ملخص طلبك</h3>
+        <dl id="sumList"><dt>الخدمة</dt><dd>—</dd></dl>
+        <div class="total"><span>الإجمالي التقديري</span><b id="total">—</b><em id="payRule"></em></div>
+        <a class="btn btn-wa" id="send" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>أرسل طلبي عبر واتساب</a>
+        <p class="err" id="err" hidden></p>
+        <p class="small">السعر النهائي نأكده لك في المحادثة قبل البدء.</p>
+      </aside>
+    </form>
   </div>
 </section>
-
-</form>
-<footer>إنجاز رقمي · واتساب <span dir="ltr">+966 55 681 6716</span></footer>
-</div>
 </main>
 
-<div class="actions" id="actions">
+<footer>
   <div class="wrap">
-    <button type="button" class="btn ghost" id="back">رجوع</button>
-    <button type="button" class="btn primary" id="next">التالي</button>
-    <a class="btn wa" id="send" href="#" target="_blank" rel="noopener" hidden>أرسل طلبي عبر واتساب</a>
+    <div class="foot-brand"><img src="img/logo.webp" alt="شعار إنجاز رقمي" width="64" height="64"><div><b style="font-family:var(--head);font-size:18px">إنجاز رقمي</b><p>إعلانات فيديو بالذكاء الاصطناعي • عروض PowerPoint • فيديو شرح • سيرة ذاتية</p></div></div>
+    <div class="socials">
+      <a href="https://wa.me/966556816716" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span dir="ltr">055 681 6716</span></a>
+      <a href="https://www.tiktok.com/@enjazdigital" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tt"/></svg>تيك توك</a>
+      <a href="https://x.com/enjazdigital" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-x"/></svg>إكس</a>
+    </div>
+    <p class="copy">© 2026 إنجاز رقمي — ساعات الرد يوميًا من 8 صباحًا إلى 11 مساءً.</p>
   </div>
-</div>
+</footer>
+
+<a class="fab off" id="fab" href="https://wa.me/966556816716" target="_blank" rel="noopener" aria-label="تواصل معنا على واتساب"><svg aria-hidden="true" style="color:#fff"><use href="#i-wa"/></svg></a>
 
 <script>
 (function(){
-  var WA = '966556816716';
-  var KEY = 'enjaz-order-v1';
-  var PKGS = {
-    quick:   {name:'تنسيق سريع', min:60, max:null, limit:10, desc:'تنسيق عرض جاهز، وتوحيد الخطوط والألوان', content:false},
-    student: {name:'عرض طلابي', min:120, max:180, limit:10, desc:'تصميم من محتوى جاهز، مع صور وأيقونات مناسبة', content:false},
-    full:    {name:'عرض متكامل', min:200, max:300, limit:10, desc:'إعداد المحتوى وتنظيمه وتصميم العرض', content:true},
-    teacher: {name:'عرض تعليمي للمعلمات', min:180, max:320, limit:15, desc:'عرض تفاعلي بأسئلة أو أنشطة وعناصر للشرح', content:false},
-    pro:     {name:'عرض احترافي موسّع', min:350, max:550, limit:20, desc:'مخططات أو إنفوجرافيك وحركات بسيطة حسب الحاجة', content:false}
+  var WA = '966556816716', KEY = 'enjaz-order-v2', CV_FORM = '../';
+  var CATS = {
+    ads: {label:'إعلان فيديو', icon:'🎬'},
+    ppt: {label:'عرض PowerPoint', icon:'📊'},
+    explainer: {label:'فيديو شرح', icon:'🎥'},
+    cv: {label:'السيرة الذاتية والتوظيف', icon:'📄'},
+    eservice: {label:'خدمة إلكترونية', icon:'💻'}
   };
-  var DURS = {
-    short: {name:'قصير — حتى 30 ثانية', min:100, max:180},
-    mid:   {name:'متوسط — من 31 ثانية إلى 3 دقائق', min:200, max:400},
-    long:  {name:'موسّع — أكثر من 3 دقائق وحتى 5 دقائق', min:400, max:700},
-    xl:    {name:'أطول من 5 دقائق', min:null, max:null}
+  var PLANS = {
+    ads: [
+      {id:'ad-basic', name:'الإعلان الأساسي', price:99, was:129, flag:'عرض الإطلاق', note:'سعر الإطلاق لأول 15 عميل', feats:['فيديو من 15 إلى 20 ثانية','فكرة وسكربت وصوت سعودي احترافي','مقاس واحد تختاره']},
+      {id:'ad-adv', name:'الإعلان المتقدم', price:249, feats:['فيديو من 30 إلى 40 ثانية','مقاسين للنشر (عمودي ومربع مثلًا)','صوت سعودي احترافي ومونتاج كامل']},
+      {id:'ad-store', name:'باقة المتجر', price:329, hot:true, flag:'ننصح فيها للمتاجر', feats:['إعلان فيديو 30 ثانية','3 تصاميم بوستات بنفس الهوية','جاهزة لحملتك على السوشال']},
+      {id:'ad-pro', name:'الباقة الاحترافية', price:469, feats:['3 فيديوهات إعلانية','هوية بصرية موحدة لكل الفيديوهات','مناسبة لحملة كاملة أو عدة منتجات']}
+    ],
+    ppt: [
+      {id:'ppt-quick', name:'تنسيق سريع', price:69, limit:12, content:false, feats:['حتى 12 شريحة','المحتوى منك، ونرتبه ونوحد الخطوط والألوان','تسليم PowerPoint وPDF']},
+      {id:'ppt-full', name:'عرض متكامل', price:139, limit:15, content:true, hot:true, flag:'شامل المحتوى', feats:['حتى 15 شريحة','نجهز المحتوى والتصميم من الموضوع','تسليم PowerPoint وPDF']},
+      {id:'ppt-pro', name:'عرض احترافي', price:229, limit:25, content:false, feats:['حتى 25 شريحة','تصميم احترافي بمخططات وأيقونات','للمناقشات والمشاريع الكبيرة']}
+    ],
+    explainer: [
+      {id:'ex-short', name:'فيديو شرح قصير', price:99, feats:['حتى 60 ثانية','نص وصوت ومشاهد مناسبة','مثالي لشرح درس أو فكرة']},
+      {id:'ex-long', name:'فيديو شرح طويل', price:179, feats:['من دقيقة إلى 3 دقائق','تقسيم الشرح لمشاهد واضحة','صوت احترافي ومونتاج']},
+      {id:'ex-gold', name:'الباقة الذهبية', price:199, hot:true, flag:'وفّر', feats:['عرض PowerPoint للدرس','+ فيديو شرح حتى 60 ثانية','نفس الموضوع والهوية']}
+    ],
+    cv: [
+      {id:'cv-one', name:'سيرة ذاتية بلغة واحدة', price:69, feats:['متوافقة مع أنظمة ATS','عربي أو إنجليزي','PDF وWord']},
+      {id:'cv-two', name:'سيرة عربي + إنجليزي', price:99, feats:['نسختين متطابقتين','متوافقة مع أنظمة ATS','PDF وWord']},
+      {id:'cv-li', name:'تحسين لينكدإن', price:79, feats:['عنوان ونبذة وخبرات بكلمات مفتاحية','يرفع ظهورك لمسؤولي التوظيف']},
+      {id:'cv-bundle', name:'باقة التوظيف', price:169, hot:true, flag:'الأوفر', feats:['سيرة عربي + إنجليزي','تحسين لينكدإن','خطاب تقديم']},
+      {id:'cv-platform', name:'ملف منصة توظيف', price:49, feats:['إنشاء أو تحديث ملفك في منصة توظيف']},
+      {id:'cv-apply', name:'التقديم على 15 وظيفة', price:139, feats:['تقديم على 15 وظيفة مناسبة لك','تقرير بالوظائف اللي قدمنا عليها']}
+    ],
+    eservice: [
+      {id:'es', name:'خدمة إلكترونية', price:49, from:true, feats:['خطاب، تنسيق ملف، ومهام رقمية بسيطة','السعر حسب المهمة ويبدأ من 49 ريال']}
+    ]
   };
-  var BUNDLES = {
-    bteacher: {name:'باقة المعلمات', pkg:'teacher', min:250, max:450, limit:15, video:'فيديو شرح للدرس حتى 30 ثانية'},
-    bstudent: {name:'باقة طلاب الجامعات', pkg:'student', min:199, max:320, limit:10, video:'فيديو قصير حتى 30 ثانية يلخص العرض'}
+  var FINE = {
+    ads: '🎁 عرض الإطلاق: الإعلان الأساسي بـ 99 ريال بدل 129 لأول 15 عميل. التعديل الإضافي للفيديو بعد التعديلين المجانيين 39 ريال.',
+    ppt: 'الشريحة الإضافية: 8 ريال للتصميم، و15 ريال مع إعداد المحتوى. التعديل الإضافي بعد التعديلين المجانيين 15 ريال.',
+    explainer: 'الفيديوهات الأطول من 3 دقائق تُسعّر بعد مراجعة التفاصيل. التعديل الإضافي للفيديو 39 ريال.',
+    cv: 'نجهز ملفك باحتراف عشان تتقدم بأفضل صورة، ولا نضمن التوظيف أو المقابلة لأنها قرار جهة العمل. تبي تعبي بياناتك كاملة؟ <a href="../" style="color:var(--cyan);font-weight:700">نموذج السيرة الذاتية التفصيلي</a>.'
   };
-  function round5(n){ return Math.round(n/5)*5; }
-  var $ = function(id){return document.getElementById(id)};
+  var $ = function(id){ return document.getElementById(id); };
   var form = $('form');
-  var s = {step:0};
+  var st = {cat:'', plan:'', code:''};
 
-  // ---------- storage ----------
-  function load(){ try{ var v = localStorage.getItem(KEY); return v ? JSON.parse(v) : null; }catch(e){ return null; } }
-  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(collect())); }catch(e){} }
-  function clearSave(){ try{ localStorage.removeItem(KEY); }catch(e){} }
+  function find(id){ for(var c in PLANS){ for(var i=0;i<PLANS[c].length;i++){ if(PLANS[c][i].id===id) return {cat:c, p:PLANS[c][i]}; } } return null; }
+  function esc(t){ var d=document.createElement('div'); d.textContent=String(t); return d.innerHTML; }
+  function txt(id){ var e=$(id); return e ? (e.value||'').trim() : ''; }
+  function radio(n){ var e=form.querySelector('input[name="'+n+'"]:checked'); return e ? e.value : ''; }
 
-  // ---------- build option lists ----------
-  function pkgOrder(){
-    var r = val('role');
-    if(r==='teacher') return ['teacher','quick','student','full','pro'];
-    if(r==='student') return ['student','quick','full','pro','teacher'];
-    return ['quick','student','full','pro','teacher'];
-  }
-  function renderPkgs(){
-    var cur = val('pkg');
-    var html = pkgOrder().map(function(k){
-      var p = PKGS[k];
-      var price = p.max ? ('من '+p.min+' إلى '+p.max+' ﷼') : ('يبدأ من '+p.min+' ﷼');
-      return '<label class="opt"><input type="radio" name="pkg" id="pkg-'+k+'" value="'+k+'"'+(cur===k?' checked':'')+'><span class="card"><span class="row"><span class="t">'+p.name+'</span><span class="p">'+price+'</span></span><span class="d">'+p.desc+' · حتى '+p.limit+' شرائح</span></span></label>';
-    }).join('') +
-    '<label class="opt"><input type="radio" name="pkg" id="pkg-help" value="help"'+(cur==='help'?' checked':'')+'><span class="card"><span class="t">مو متأكد، ساعدوني أختار</span><span class="d">سؤالين ونقترح لك الباقة المناسبة</span></span></label>';
-    $('pkgList').innerHTML = html;
-  }
-  function renderDurs(){
-    $('durList').innerHTML = Object.keys(DURS).map(function(k){
-      var d = DURS[k];
-      var price = d.min ? ('من '+d.min+' إلى '+d.max+' ﷼') : 'يُسعّر بعد المراجعة';
-      return '<label class="opt"><input type="radio" name="dur" id="dur-'+k+'" value="'+k+'"><span class="card"><span class="row"><span class="t">'+d.name+'</span><span class="p">'+price+'</span></span></span></label>';
+  /* ---------- pricing tabs ---------- */
+  function renderPlans(cat){
+    document.querySelectorAll('.tab').forEach(function(t){ var on=t.dataset.cat===cat; t.setAttribute('aria-selected', on?'true':'false'); t.tabIndex = on?0:-1; });
+    $('plans').setAttribute('aria-labelledby','tab-'+cat);
+    $('plans').innerHTML = PLANS[cat].map(function(p){
+      return '<article class="plan'+(p.hot?' hot':'')+'">'+
+        (p.flag?'<span class="flag">'+esc(p.flag)+'</span>':'')+
+        '<h3>'+esc(p.name)+'</h3>'+
+        '<div class="amt">'+(p.from?'<span>يبدأ من</span>':'')+'<b>'+p.price+'</b><span>ريال</span>'+(p.was?'<s>'+p.was+'</s>':'')+'</div>'+
+        (p.note?'<p class="note">'+esc(p.note)+'</p>':'')+
+        '<ul>'+p.feats.map(function(f){return '<li>'+esc(f)+'</li>';}).join('')+'</ul>'+
+        '<a class="btn '+(p.hot||p.was?'btn-gold':'btn-ghost')+'" href="#order" data-plan="'+p.id+'">اطلب هذي الباقة</a>'+
+      '</article>';
     }).join('');
+    $('planFine').innerHTML = FINE[cat] || '';
+  }
+  document.querySelector('.tabs').addEventListener('click', function(e){ var t=e.target.closest('.tab'); if(t) renderPlans(t.dataset.cat); });
+  document.querySelector('.tabs').addEventListener('keydown', function(e){
+    if(e.key!=='ArrowLeft' && e.key!=='ArrowRight') return;
+    var tabs=[].slice.call(document.querySelectorAll('.tab')), i=tabs.indexOf(document.activeElement); if(i<0) return;
+    var n = e.key==='ArrowLeft' ? (i+1)%tabs.length : (i-1+tabs.length)%tabs.length;
+    tabs[n].focus(); renderPlans(tabs[n].dataset.cat); e.preventDefault();
+  });
+  document.addEventListener('click', function(e){
+    var a=e.target.closest('[data-tab]'); if(a){ renderPlans(a.dataset.tab); }
+    var b=e.target.closest('[data-plan]'); if(b){ var f=find(b.dataset.plan); if(f){ selectCat(f.cat); selectPlan(f.p.id); } }
+    var s=e.target.closest('[data-svc]'); if(s){ selectCat(s.dataset.svc); if(PLANS[s.dataset.svc].length===1) selectPlan(PLANS[s.dataset.svc][0].id); }
+  });
+
+  /* ---------- order form ---------- */
+  $('svcChips').innerHTML = Object.keys(CATS).map(function(k){
+    return '<label class="chip"><input type="radio" name="cat" value="'+k+'"><span>'+CATS[k].icon+' '+CATS[k].label+'</span></label>';
+  }).join('');
+
+  var DETAILS = {
+    ads: '<div class="grid2"><label class="in" for="d-store">اسم المتجر أو المشروع<input type="text" id="d-store" placeholder="مثال: عطور الورد"></label>'+
+         '<label class="in" for="d-product">المنتج أو العرض<input type="text" id="d-product" placeholder="مثال: عطر جديد، خصم 30%"></label></div>'+
+         '<div class="field"><span class="lbl" style="font-size:15px">وين بتنشره؟</span><div class="chips">'+
+         ['تيك توك','سناب شات','إنستقرام','واتساب','أكثر من منصة'].map(function(x){return '<label class="chip"><input type="radio" name="d-plat" value="'+x+'"><span>'+x+'</span></label>';}).join('')+'</div></div>'+
+         '<label class="in" for="d-notes"><span>ملاحظات <small>اختياري</small></span><textarea id="d-notes" placeholder="الفكرة اللي تتخيلها، الألوان، أسلوب تحبه… وبترسل صور المنتج في المحادثة"></textarea></label>',
+    ppt: '<div class="field"><span class="lbl" style="font-size:15px">أنت؟</span><div class="chips">'+
+         ['معلم / معلمة','طالب / طالبة جامعة','جهة أو أخرى'].map(function(x){return '<label class="chip"><input type="radio" name="d-role" value="'+x+'"><span>'+x+'</span></label>';}).join('')+'</div></div>'+
+         '<div class="grid2"><label class="in" for="d-subject">المادة أو المقرر<input type="text" id="d-subject" placeholder="مثال: لغتي، إدارة سلاسل الإمداد"></label>'+
+         '<label class="in" for="d-title">عنوان الدرس أو العرض<input type="text" id="d-title" placeholder="مثال: الجملة الفعلية"></label></div>'+
+         '<div class="range"><div class="row"><label for="d-slides">عدد الشرائح</label><output id="d-slidesOut">10</output></div><input type="range" id="d-slides" min="3" max="40" value="10"><p class="hint" id="d-slidesHint"></p></div>'+
+         '<div class="field"><span class="lbl" style="font-size:15px">المحتوى</span><div class="chips">'+
+         '<label class="chip"><input type="radio" name="d-content" value="ready"><span>جاهز وبرسله</span></label><label class="chip"><input type="radio" name="d-content" value="need"><span>أحتاج إعداده</span></label></div></div>'+
+         '<div class="alert" id="d-contentNote" hidden></div>'+
+         '<label class="in" for="d-notes"><span>ملاحظات <small>اختياري</small></span><textarea id="d-notes" placeholder="الطابع اللي تحبه، ألوان معينة، أنشطة تفاعلية…"></textarea></label>',
+    explainer: '<label class="in" for="d-title">موضوع الفيديو<input type="text" id="d-title" placeholder="مثال: شرح درس الكسور، أو تعريف بمشروعي"></label>'+
+         '<div class="field"><span class="lbl" style="font-size:15px">النص</span><div class="chips"><label class="chip"><input type="radio" name="d-script" value="جاهز"><span>جاهز وبرسله</span></label><label class="chip"><input type="radio" name="d-script" value="أحتاج كتابته"><span>أحتاج كتابته</span></label></div></div>'+
+         '<label class="in" for="d-notes"><span>ملاحظات <small>اختياري</small></span><textarea id="d-notes" placeholder="الفئة المستهدفة، الأسلوب، أمثلة تعجبك…"></textarea></label>',
+    cv: '<div class="grid2"><label class="in" for="d-title">الوظيفة أو المجال المستهدف<input type="text" id="d-title" placeholder="مثال: محاسب، سلاسل إمداد"></label>'+
+        '<label class="in" for="d-exp"><span>سنوات الخبرة <small>تقريبًا</small></span><input type="text" id="d-exp" placeholder="مثال: 3 سنوات، أو خريج"></label></div>'+
+        '<label class="in" for="d-notes"><span>ملاحظات <small>اختياري</small></span><textarea id="d-notes" placeholder="أي تفاصيل تحب نعرفها… وبترسل سيرتك الحالية إن وجدت"></textarea></label>'+
+        '<p class="hint">تقدر بعد الإرسال تعبي بياناتك كاملة في <a href="'+CV_FORM+'" style="color:var(--cyan);font-weight:700">نموذج السيرة الذاتية التفصيلي</a>.</p>',
+    eservice: '<label class="in" for="d-title">وش المطلوب؟<textarea id="d-title" placeholder="مثال: خطاب طلب إجازة، أو تنسيق ملف وورد 10 صفحات"></textarea></label>'
+  };
+
+  function selectCat(cat, keepPlan){
+    if(!CATS[cat]) return;
+    var r=form.querySelector('input[name="cat"][value="'+cat+'"]'); if(r) r.checked=true;
+    if(st.cat!==cat){ st.cat=cat; if(!keepPlan) st.plan=''; $('detailsBox').innerHTML = DETAILS[cat]; }
+    $('planPicks').innerHTML = PLANS[cat].map(function(p){
+      return '<label class="pick"><input type="radio" name="plan" value="'+p.id+'"'+(st.plan===p.id?' checked':'')+'><span class="c"><b>'+esc(p.name)+'</b><span>'+(p.from?'يبدأ من ':'')+p.price+' ريال'+(p.was?' <s style="color:var(--soft);font-weight:600">'+p.was+'</s>':'')+'</span><small>'+esc(p.feats[0])+'</small></span></label>';
+    }).join('');
+    $('planField').hidden=false; $('detailsField').hidden=false; $('whenField').hidden=false;
+    if(PLANS[cat].length===1 && !st.plan) selectPlan(PLANS[cat][0].id);
+    update();
+  }
+  function selectPlan(id){
+    st.plan=id; var r=form.querySelector('input[name="plan"][value="'+id+'"]'); if(r) r.checked=true; update();
   }
 
-  // ---------- helpers ----------
-  function val(name){ var el = form.querySelector('input[name="'+name+'"]:checked'); return el ? el.value : ''; }
-  function setVal(name, v){ var el = form.querySelector('input[name="'+name+'"][value="'+v+'"]'); if(el) el.checked = true; }
-  function txt(id){ return ($(id).value||'').trim(); }
-
-  function recommend(){
-    var has = val('has'), n = +$('helpSlides').value, r = val('role');
-    if(!has) return null;
-    var k;
-    if(has==='deck') k = n<=20 ? 'quick' : 'quick';
-    else if(has==='none') k = 'full';
-    else if(r==='teacher') k = n<=15 ? 'teacher' : 'pro';
-    else k = n<=10 ? 'student' : (n<=20 ? 'pro' : 'pro');
-    return k;
+  function pptExtra(p){
+    if(st.cat!=='ppt' || !p.limit || !$('d-slides')) return {n:0, rate:0, add:0};
+    var n=+$('d-slides').value, extra=Math.max(0,n-p.limit), need = p.content || radio('d-content')==='need';
+    var rate = need?15:8; return {n:n, extra:extra, rate:rate, add:extra*rate};
   }
-  function effectivePkg(){
-    var b = BUNDLES[val('service')]; if(b) return b.pkg;
-    var p = val('pkg');
-    if(p==='help') return recommend();
-    return p;
-  }
-  function contentState(){
-    var k = effectivePkg();
-    if(k==='full') return 'need';
-    if(!BUNDLES[val('service')] && val('pkg')==='help'){ var h = val('has'); if(h==='none') return 'need'; if(h) return 'ready'; }
-    return val('content');
-  }
-  function isHelp(){ return !BUNDLES[val('service')] && val('pkg')==='help'; }
-  function slidesCount(){ return isHelp() ? +$('helpSlides').value : +$('slides').value; }
-
-  function estimate(){
-    var svc = val('service');
-    if(svc==='video'){
-      var d = DURS[val('dur')]; if(!d) return null;
-      if(!d.min) return {text:'يُسعّر بعد مراجعة التفاصيل'};
-      return {min:d.min, max:d.max, text:'من '+d.min+' إلى '+d.max+' ﷼'};
-    }
-    if(svc==='eservice') return {text:'يُحدد بعد مراجعة الطلب'};
-    var b = BUNDLES[svc];
-    if(b){
-      var bx = Math.max(0, slidesCount() - b.limit);
-      var br = contentState()==='need' ? 20 : 10;
-      var bmin = b.min + bx*br, bmax = b.max + bx*br;
-      return {min:bmin, max:bmax, extra:bx, rate:br, text:'من '+bmin+' إلى '+bmax+' ﷼'};
-    }
-    if(svc==='combo'){
-      var pe = pptEstimate(), dv = DURS[val('dur')];
-      if(!pe) return null;
-      if(!dv) return pe;
-      if(!dv.min) return {extra:pe.extra, text:'العرض '+pe.text+' + الفيديو يُسعّر بعد المراجعة'};
-      var cmin = round5((pe.min + dv.min)*0.9);
-      var cmax = pe.max ? round5((pe.max + dv.max)*0.9) : null;
-      return {min:cmin, max:cmax, extra:pe.extra, text: cmax ? ('من '+cmin+' إلى '+cmax+' ﷼ (بعد خصم 10%)') : ('يبدأ من '+cmin+' ﷼ (بعد خصم 10%)')};
-    }
-    return pptEstimate();
-  }
-  function pptEstimate(){
-    var k = effectivePkg(); var p = PKGS[k]; if(!p) return null;
-    var n = slidesCount();
-    var extra = Math.max(0, n - p.limit);
-    var rate = (p.content || contentState()==='need') ? 20 : 10;
-    var add = extra * rate;
-    var min = p.min + add, max = p.max ? p.max + add : null;
-    return {min:min, max:max, extra:extra, rate:rate, text: max ? ('من '+min+' إلى '+max+' ﷼') : ('يبدأ من '+min+' ﷼')};
-  }
-
-  // ---------- steps ----------
-  function steps(){
-    var svc = val('service');
-    var list = ['role','service'];
-    if(svc==='ppt') list = list.concat(['pkg','details','style','summary']);
-    else if(svc==='combo') list = list.concat(['pkg','details','video','style','summary']);
-    else if(BUNDLES[svc]) list = list.concat(['details','style','summary']);
-    else if(svc==='video') list = list.concat(['video','summary']);
-    else if(svc==='eservice') list = list.concat(['eservice','summary']);
-    else list = list.concat(['pkg','details','style','summary']);
-    return list;
-  }
-  function current(){ return steps()[s.step]; }
-
-  function valid(name){
-    switch(name){
-      case 'role': return !!val('role');
-      case 'service': return !!val('service');
-      case 'pkg': return !!val('pkg') && (val('pkg')!=='help' || !!recommend());
-      case 'details':
-        var r = val('role');
-        var base = r==='teacher' ? (txt('subject') && txt('lesson')) : txt('topic');
-        var c = (effectivePkg()==='full' || isHelp()) ? true : !!val('content');
-        var inter = r==='teacher' && effectivePkg()!=='quick' ? !!val('inter') : true;
-        return !!base && c && inter && !!val('lang');
-      case 'style': return true;
-      case 'video': return (val('service')==='combo' || !!txt('vtopic')) && !!val('dur') && !!val('script') && !!val('voice') && !!val('trans');
-      case 'eservice': return txt('edesc').length >= 5;
-      case 'summary': return !!$('date').value;
-    }
-    return true;
-  }
-
-  function fmtDate(v){
-    if(!v) return '';
-    var d = new Date(v+'T12:00:00');
-    try{ return d.toLocaleDateString('ar-u-ca-gregory-nu-latn',{weekday:'long', day:'numeric', month:'long'}); }catch(e){ return v; }
-  }
-  function daysUntil(v){
-    if(!v) return 99; var t = new Date(); t.setHours(12,0,0,0);
-    return Math.round((new Date(v+'T12:00:00') - t)/86400000);
+  function calc(){
+    var f=find(st.plan); if(!f) return null;
+    var p=f.p, base=p.price, ex=pptExtra(p), sub=base+(ex.add||0), rush=0;
+    if($('rush').checked){ rush=Math.max(30, Math.round(sub*0.4)); }
+    var total=sub+rush;
+    return {p:p, base:base, ex:ex, rush:rush, total:total, from:!!p.from};
   }
   function code(){
-    if(!s.code){ var d = new Date(); s.code = 'ER-' + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0') + '-' + String(Math.floor(10+Math.random()*90)); }
-    return s.code;
+    if(!st.code){ var d=new Date(); st.code='ER-'+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+'-'+String(Math.floor(10+Math.random()*90)); }
+    return st.code;
   }
+  function fmtDate(v){ if(!v) return ''; try{ return new Date(v+'T12:00:00').toLocaleDateString('ar-SA-u-ca-gregory-nu-latn',{weekday:'long',day:'numeric',month:'long'}); }catch(e){ return v; } }
 
   function rows(){
-    var svc = val('service'), r = val('role'), out = [];
-    var roleName = {teacher:'معلمة / معلم', student:'طالب / طالبة جامعة', other:'أخرى'}[r] || '';
-    if(svc==='ppt' || svc==='combo' || BUNDLES[svc]){
-      var k = effectivePkg(), p = PKGS[k] || {}, b = BUNDLES[svc];
-      var who = roleName;
-      if(r==='teacher') who += (txt('subject')?' — '+txt('subject'):'') + (txt('grade')?'، '+txt('grade'):'');
-      else if(txt('course')) who += ' — ' + txt('course');
-      out.push(['الفئة', who]);
-      if(b) out.push(['الباقة', b.name + ': ' + p.name + ' (حتى '+b.limit+' شريحة) + ' + b.video]);
-      else out.push(['الباقة', (p.name||'') + ' (حتى '+(p.limit||'')+' شريحة)' + (isHelp()?' — مقترحة':'')]);
-      if(r==='teacher') out.push(['الدرس', txt('lesson')]);
-      else out.push(['العرض', txt('topic') + (val('kind')?' — '+val('kind'):'')]);
-      var est = estimate();
-      out.push(['عدد الشرائح', slidesCount() + (est && est.extra ? ' (+'+est.extra+' شريحة إضافية)' : '')]);
-      out.push(['المحتوى', contentState()==='need' ? 'يحتاج إعداد' : 'جاهز (سأرسله هنا)']);
-      if(r==='teacher' && val('inter')) out.push(['أنشطة تفاعلية', val('inter')]);
-      out.push(['اللغة', val('lang')]);
-      if(svc==='combo'){
-        var dv = DURS[val('dur')];
-        out.push(['الفيديو', (dv ? dv.name : '') + (val('script')?'، النص: '+val('script'):'') + (val('voice')?'، '+val('voice'):'') + (val('trans')?'، ترجمة: '+val('trans'):'')]);
-      }
-      if(val('style')) out.push(['الطابع', val('style')]);
-      if(txt('notes')) out.push(['ملاحظات', txt('notes')]);
-    } else if(svc==='video'){
-      out.push(['الفئة', roleName]);
-      out.push(['الموضوع', txt('vtopic')]);
-      var d = DURS[val('dur')]; out.push(['المدة', d ? d.name : '']);
-      out.push(['النص', val('script')]);
-      out.push(['الصوت', val('voice')]);
-      out.push(['ترجمة', val('trans')]);
-      if(txt('vnotes')) out.push(['ملاحظات', txt('vnotes')]);
-    } else if(svc==='eservice'){
-      out.push(['الفئة', roleName]);
-      out.push(['المطلوب', txt('edesc')]);
+    var out=[], c=calc();
+    if(!st.cat) return out;
+    out.push(['الخدمة', CATS[st.cat].label]);
+    if(c) out.push(['الباقة', c.p.name+' — '+(c.from?'يبدأ من ':'')+c.base+' ريال'+(c.p.was?' (سعر الإطلاق)':'')]);
+    if(st.cat==='ads'){
+      if(txt('d-store')) out.push(['المتجر', txt('d-store')]);
+      if(txt('d-product')) out.push(['المنتج / العرض', txt('d-product')]);
+      if(radio('d-plat')) out.push(['المنصة', radio('d-plat')]);
+    } else if(st.cat==='ppt'){
+      if(radio('d-role')) out.push(['الفئة', radio('d-role')]);
+      if(txt('d-subject')) out.push(['المادة', txt('d-subject')]);
+      if(txt('d-title')) out.push(['العنوان', txt('d-title')]);
+      if(c && $('d-slides')) out.push(['الشرائح', $('d-slides').value + (c.ex.extra? ' (+'+c.ex.extra+' إضافية × '+c.ex.rate+' ريال)':'')]);
+      var cn=radio('d-content'); if(c && (c.p.content || cn)) out.push(['المحتوى', c.p.content||cn==='need' ? 'يحتاج إعداد' : 'جاهز (برسله)']);
+    } else if(st.cat==='explainer'){
+      if(txt('d-title')) out.push(['الموضوع', txt('d-title')]);
+      if(radio('d-script')) out.push(['النص', radio('d-script')]);
+    } else if(st.cat==='cv'){
+      if(txt('d-title')) out.push(['الوظيفة المستهدفة', txt('d-title')]);
+      if(txt('d-exp')) out.push(['الخبرة', txt('d-exp')]);
+    } else if(st.cat==='eservice'){
+      if(txt('d-title')) out.push(['المطلوب', txt('d-title')]);
     }
+    if(txt('d-notes')) out.push(['ملاحظات', txt('d-notes')]);
     if($('date').value) out.push(['الموعد', fmtDate($('date').value)]);
+    if(c && c.rush) out.push(['مستعجل', 'نعم (+'+c.rush+' ريال)']);
+    if(txt('name')) out.push(['الاسم', txt('name')]);
     return out;
   }
-
+  function payRule(c){
+    if(!c) return '';
+    if(c.total<150) return 'أقل من 150 ريال: الدفع كامل قبل البدء';
+    return 'عربون 50% ('+Math.ceil(c.total/2)+' ريال) والباقي بعد المعاينة';
+  }
+  function missing(){
+    if(!st.cat) return 'اختر الخدمة أولًا';
+    if(!st.plan) return 'اختر الباقة';
+    if(st.cat==='ads' && !txt('d-product')) return 'اكتب المنتج أو العرض';
+    if(st.cat==='ppt' && !txt('d-title')) return 'اكتب عنوان الدرس أو العرض';
+    if(st.cat==='explainer' && !txt('d-title')) return 'اكتب موضوع الفيديو';
+    if(st.cat==='cv' && !txt('d-title')) return 'اكتب الوظيفة المستهدفة';
+    if(st.cat==='eservice' && txt('d-title').length<4) return 'اكتب وش المطلوب';
+    if(!$('date').value) return 'اختر موعد التسليم';
+    return '';
+  }
   function message(){
-    var svc = val('service');
-    var tag = {ppt:'[عرض تقديمي]', video:'[فيديو]', combo:'[عرض + فيديو]', bteacher:'[باقة المعلمات]', bstudent:'[باقة طلاب الجامعات]', eservice:'[خدمة إلكترونية]'}[svc] || '';
-    var lines = [tag + ' طلب رقم ' + code()];
-    rows().forEach(function(r){ lines.push(r[0] + ': ' + r[1]); });
-    var est = estimate();
-    if(est) lines.push('السعر التقديري: ' + est.text);
-    return lines.join('\n');
+    var c=calc(), L=['*طلب جديد — إنجاز رقمي*','رقم الطلب: '+code()];
+    rows().forEach(function(r){ L.push(r[0]+': '+r[1]); });
+    if(c){ L.push('الإجمالي التقديري: '+(c.from?'يبدأ من ':'')+c.total+' ريال'); L.push('الدفع: '+payRule(c)); }
+    return L.join('\n');
   }
-  function waLink(){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(message()); }
-
-  function esc(t){ var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
-
-  function renderSummary(){
-    var est = estimate();
-    $('priceVal').textContent = est ? est.text : '—';
-    $('sumList').innerHTML = rows().map(function(r){ return '<dt>'+esc(r[0])+'</dt><dd>'+esc(String(r[1]))+'</dd>'; }).join('');
-    var dd = daysUntil($('date').value);
-    $('rushNote').hidden = !($('date').value && dd <= 2);
-    $('send').href = waLink();
-    $('waAgain').href = waLink();
-  }
-
-  function renderDetails(){
-    var r = val('role');
-    $('teacherFields').hidden = r!=='teacher';
-    $('studentFields').hidden = r==='teacher';
-    $('kindSet').hidden = r!=='student';
-    var k = effectivePkg(), p = PKGS[k], bb = BUNDLES[val('service')];
-    var help = isHelp();
-    $('contentSet').hidden = (k==='full' || help);
-    $('interSet').hidden = !((r==='teacher' && k!=='quick') || val('service')==='bteacher');
-    // slider follows the help answer when the package was suggested
-    if(help){ $('slides').value = $('helpSlides').value; }
-    $('slidesOut').textContent = $('slides').value;
-    if(p){
-      var lim = bb ? bb.limit : p.limit;
-      var n = +$('slides').value, extra = Math.max(0, n - lim);
-      var rate = (p.content || contentState()==='need') ? 20 : 10;
-      $('slidesHint').textContent = extra
-        ? ('الباقة تشمل حتى '+lim+' شريحة، والإضافي '+extra+' × '+rate+' ﷼ = '+(extra*rate)+' ﷼ تقريبًا.')
-        : ('الباقة تشمل حتى '+lim+' شريحة.');
+  function update(){
+    var c=calc();
+    // ppt helpers
+    if(st.cat==='ppt' && $('d-slides')){
+      $('d-slidesOut').textContent=$('d-slides').value;
+      var f=find(st.plan);
+      if(f){ var ex=pptExtra(f.p); $('d-slidesHint').textContent = ex.extra ? ('الباقة تشمل حتى '+f.p.limit+' شريحة، والإضافي '+ex.extra+' × '+ex.rate+' = '+ex.add+' ريال.') : ('الباقة تشمل حتى '+f.p.limit+' شريحة.'); }
+      else $('d-slidesHint').textContent='';
+      var note=$('d-contentNote');
+      if(st.plan==='ppt-quick' && radio('d-content')==='need'){ note.hidden=false; note.innerHTML='التنسيق السريع يعتمد على محتوى جاهز. إذا تحتاج إعداد المحتوى، الأنسب <b>العرض المتكامل</b>.'; } else note.hidden=true;
     }
-    var note = $('contentNote');
-    if((k==='quick' || k==='student') && val('content')==='need'){
-      note.hidden = false;
-      note.innerHTML = 'باقة <b>'+p.name+'</b> تعتمد على محتوى جاهز. إذا تحتاج إعداد المحتوى، الأنسب <b>العرض المتكامل</b> — تقدر ترجع وتغيّر الباقة.';
-    } else note.hidden = true;
+    $('sumList').innerHTML = rows().map(function(r){ return '<dt>'+esc(r[0])+'</dt><dd>'+esc(r[1])+'</dd>'; }).join('') || '<dt>الخدمة</dt><dd>—</dd>';
+    $('total').textContent = c ? ((c.from?'يبدأ من ':'')+c.total+' ريال') : '—';
+    $('payRule').textContent = payRule(c);
+    var m=missing();
+    $('send').href = m ? '#' : ('https://wa.me/'+WA+'?text='+encodeURIComponent(message()));
+    $('send').style.opacity = m ? '.55' : '';
+    $('send').setAttribute('aria-disabled', m ? 'true':'false');
+    save();
   }
-
-  function renderReco(){
-    var isHelp = val('pkg')==='help';
-    $('helpBox').hidden = !isHelp;
-    $('helpSlidesOut').textContent = $('helpSlides').value;
-    var k = isHelp ? recommend() : null, box = $('reco');
-    if(k){
-      var p = PKGS[k];
-      box.hidden = false;
-      box.innerHTML = 'نقترح لك <b>'+p.name+'</b> — '+(p.max?('من '+p.min+' إلى '+p.max):('يبدأ من '+p.min))+' ﷼، حتى '+p.limit+' شريحة.';
-    } else box.hidden = true;
-  }
-
-  function show(){
-    var list = steps(); if(s.step >= list.length) s.step = list.length-1;
-    var name = list[s.step];
-    form.querySelectorAll('.step').forEach(function(sec){ sec.hidden = sec.dataset.step !== name; });
-    var total = list.length;
-    var done = name==='done';
-    $('progressWrap').hidden = done;
-    $('actions').hidden = done;
-    $('count').textContent = (s.step+1) + ' من ' + total;
-    var pct = Math.round(((s.step+1)/total)*100);
-    $('barFill').style.width = pct + '%';
-    $('bar').setAttribute('aria-valuenow', pct);
-    $('back').hidden = s.step===0;
-    var last = name==='summary';
-    $('next').hidden = last;
-    $('send').hidden = !last;
-    if(name==='pkg'){ renderPkgs(); renderReco(); }
-    if(name==='details') renderDetails();
-    if(name==='video'){ var cb = val('service')==='combo'; $('comboLead').hidden = !cb; $('vtopicLabel').hidden = cb; }
-    if(name==='summary'){ var dt = $('date'); var t = new Date(); dt.min = t.toISOString().slice(0,10); renderSummary(); }
-    refresh();
-  }
-  function refresh(){
-    var name = current();
-    var ok = valid(name);
-    $('next').setAttribute('aria-disabled', ok ? 'false' : 'true');
-    if(name==='summary'){
-      $('send').setAttribute('aria-disabled', ok ? 'false' : 'true');
-      $('send').style.opacity = ok ? '' : '.45';
-    }
-  }
-
-  // ---------- events ----------
-  $('next').addEventListener('click', function(){
-    if(!valid(current())){ var f = form.querySelector('.step:not([hidden]) input:not([type=radio]):not([type=range]), .step:not([hidden]) textarea'); if(f && !f.value) f.focus(); return; }
-    s.step++; show(); save(); window.scrollTo(0,0);
-  });
-  $('back').addEventListener('click', function(){ if(s.step>0){ s.step--; show(); save(); window.scrollTo(0,0);} });
   $('send').addEventListener('click', function(e){
-    if(!valid('summary')){ e.preventDefault(); $('date').focus(); return; }
-    renderSummary(); // refresh link just before leaving
-    var list = steps(); list.push('done');
-    setTimeout(function(){ form.querySelectorAll('.step').forEach(function(sec){ sec.hidden = sec.dataset.step !== 'done'; }); $('progressWrap').hidden = true; $('actions').hidden = true; window.scrollTo(0,0); }, 300);
+    var m=missing();
+    if(m){ e.preventDefault(); $('err').textContent='باقي: '+m; $('err').hidden=false; return; }
+    $('err').hidden=true;
   });
-  $('restart').addEventListener('click', function(){ clearSave(); form.reset(); s = {step:0}; $('slides').value = 10; $('helpSlides').value = 10; show(); });
-
   form.addEventListener('change', function(e){
-    if(e.target.name==='role'){ renderPkgs(); }
-    if(e.target.name==='pkg' || e.target.name==='has'){ renderReco(); }
-    if(current()==='details') renderDetails();
-    if(current()==='summary') renderSummary();
-    refresh(); save();
+    if(e.target.name==='cat') selectCat(e.target.value);
+    else if(e.target.name==='plan') selectPlan(e.target.value);
+    else update();
+    if(!missing()) $('err').hidden=true;
   });
-  form.addEventListener('input', function(e){
-    if(e.target.id==='slides'){ $('slidesOut').textContent = e.target.value; renderDetails(); }
-    if(e.target.id==='helpSlides'){ renderReco(); }
-    if(current()==='summary') renderSummary();
-    refresh(); save();
-  });
+  form.addEventListener('input', function(){ update(); });
   form.addEventListener('submit', function(e){ e.preventDefault(); });
 
-  // ---------- state ----------
-  function collect(){
-    var o = {step:s.step, code:s.code, radios:{}, fields:{}};
-    form.querySelectorAll('input[type=radio]:checked').forEach(function(r){ o.radios[r.name] = r.value; });
-    ['subject','grade','lesson','course','topic','notes','vtopic','vnotes','edesc','date','slides','helpSlides'].forEach(function(id){ o.fields[id] = $(id).value; });
-    return o;
+  /* ---------- persistence ---------- */
+  function save(){
+    try{
+      var o={cat:st.cat, plan:st.plan, code:st.code, f:{}, r:{}};
+      form.querySelectorAll('input[type=text],textarea,input[type=date],input[type=range]').forEach(function(el){ if(el.id) o.f[el.id]=el.value; });
+      form.querySelectorAll('input[type=radio]:checked').forEach(function(el){ if(el.name!=='cat'&&el.name!=='plan') o.r[el.name]=el.value; });
+      o.rush=$('rush').checked;
+      localStorage.setItem(KEY, JSON.stringify(o));
+    }catch(e){}
   }
-  function restore(o){
-    if(!o) return;
-    Object.keys(o.fields||{}).forEach(function(id){ if($(id) && o.fields[id]!=null) $(id).value = o.fields[id]; });
-    setVal('role', (o.radios||{}).role); renderPkgs();
-    Object.keys(o.radios||{}).forEach(function(n){ setVal(n, o.radios[n]); });
-    s.step = o.step||0; s.code = o.code;
+  function load(){
+    try{
+      var o=JSON.parse(localStorage.getItem(KEY)||'null'); if(!o||!o.cat) return;
+      st.code=o.code; selectCat(o.cat); if(o.plan) selectPlan(o.plan);
+      Object.keys(o.f||{}).forEach(function(id){ var el=$(id); if(el) el.value=o.f[id]; });
+      Object.keys(o.r||{}).forEach(function(n){ var el=form.querySelector('input[name="'+n+'"][value="'+o.r[n]+'"]'); if(el) el.checked=true; });
+      $('rush').checked=!!o.rush; update();
+    }catch(e){}
   }
 
-  renderPkgs(); renderDurs();
-  restore(load());
-  // re-apply radios rendered after restore (pkg, dur)
-  var saved = load(); if(saved && saved.radios){ ['pkg','dur'].forEach(function(n){ if(saved.radios[n]) setVal(n, saved.radios[n]); }); }
-  show();
+  var t=new Date(); $('date').min=t.toISOString().slice(0,10);
+  renderPlans('ads');
+  load();
+
+  /* ---------- floating button after hero ---------- */
+  var fab=$('fab'); function fabState(){ fab.classList.toggle('off', window.scrollY < 520); }
+  window.addEventListener('scroll', fabState, {passive:true}); fabState();
+
+  /* ---------- reveal on scroll ---------- */
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){ en.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); } }); },{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  } else els.forEach(function(el){ el.classList.add('in'); });
 })();
 </script>
-
 </body>
 </html>
